@@ -1,0 +1,42 @@
+# Electrical devices
+
+- type: entity
+  parent: [ BaseAPC, BaseSpecialProtection ]
+  id: APCSpecialProtection
+
+
+# Atmos devices
+
+- type: entity
+  parent: [ GasVentScrubber, BaseSpecialProtection ]
+  id: GasVentScrubberSpecialProtection
+
+- type: entity
+  parent: [ GasVentPump, BaseSpecialProtection ]
+  id: GasVentPumpSpecialProtection
+
+
+# Doors
+
+- type: entity
+  parent: [ Airlock, BaseSpecialProtection ]
+  id: AirlockSpecialProtection
+
+
+# Buttons, switches
+
+- type: entity
+  parent: [ SignalSwitch, BaseSpecialProtection ]
+  id: SignalSwitchSpecialProtection
+
+- type: entity
+  parent: [ SignalButton, BaseSpecialProtection ]
+  id: SignalButtonSpecialProtection
+
+- type: entity
+  parent: [ SignalSwitchDirectional, BaseSpecialProtection ]
+  id: SignalSwitchDirectionalSpecialProtection
+
+- type: entity
+  parent: [ SignalButtonDirectional, BaseSpecialProtection ]
+  id: SignalButtonDirectionalSpecialProtection
