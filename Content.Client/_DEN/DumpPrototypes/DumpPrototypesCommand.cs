@@ -10,11 +10,11 @@ using Robust.Shared.Prototypes;
 namespace Content.Client._DEN.DumpPrototypesCommand;
 
 [AnyCommand]
-public sealed class DumpPrototypesCommand : IConsoleCommand
+public sealed partial class DumpPrototypesCommand : IConsoleCommand
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IFileDialogManager _dialogManager = default!;
-    [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IFileDialogManager _dialogManager = default!;
+    [Dependency] private ILogManager _logManager = default!;
 
     public string Command => "dumpprototypes";
     public string Description => Loc.GetString("Dumps all currently loaded entity and tile prototypes into a file.");
