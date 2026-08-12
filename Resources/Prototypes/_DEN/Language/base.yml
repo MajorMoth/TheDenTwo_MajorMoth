@@ -1,0 +1,8 @@
+- type: language
+  abstract: true
+  id: BaseAudible
+  name: language-base-audible
+  components:
+  - type: SpeechTransformable
+  - type: RadioTransmittable
+  - type: Audible

@@ -1,4 +1,10 @@
+# general
+
+food-sequence-content-pomegranate = pomegranate
+
 # burgers
+
+food-sequence-burger-content-pomegranate = pom
 
 # cotton burgers
 food-sequence-cotton-burger-content-plushie-alien-germ = germ

@@ -1,0 +1,6 @@
+- type: entity
+  id: BaseSpecialProtection
+  abstract: true
+  suffix: Special Protection
+  components:
+    - type: SpecialProtection

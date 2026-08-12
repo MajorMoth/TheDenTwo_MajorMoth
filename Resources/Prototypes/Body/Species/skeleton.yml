@@ -75,8 +75,9 @@
   name: Urist McBones
   components:
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: Skeleton
+  - type: Injurable
+    damageContainer: BiologicalMetaphysical
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -105,10 +106,7 @@
     speechVerb: Skeleton
   - type: ZombieImmune
   - type: Vocal
-    sounds:
-      Male: Skeleton
-      Female: Skeleton
-      Unsexed: Skeleton
+    emoteSounds: Skeleton
   - type: SkeletonAccent
   - type: Fixtures
     fixtures:
@@ -188,7 +186,7 @@
   # End DEN
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganSkeletonPerson
   abstract: true
   suffix: SkeletonPerson

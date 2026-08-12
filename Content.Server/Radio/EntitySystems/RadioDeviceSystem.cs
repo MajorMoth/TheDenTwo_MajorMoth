@@ -3,6 +3,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.Interaction;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
+using Content.Shared._DEN.Language.Components;
 using Content.Shared.Chat;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -19,14 +20,14 @@ namespace Content.Server.Radio.EntitySystems;
 /// <summary>
 ///     This system handles radio speakers and microphones (which together form a hand-held radio).
 /// </summary>
-public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
+public sealed partial class RadioDeviceSystem : SharedRadioDeviceSystem
 {
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
-    [Dependency] private readonly InteractionSystem _interaction = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private RadioSystem _radio = default!;
+    [Dependency] private InteractionSystem _interaction = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private EntityQuery<RadioTransmittableComponent> _radioLang = default!; // DEN: Languages
 
     // Used to prevent a shitter from using a bunch of radios to spam chat.
     private HashSet<(string, EntityUid, RadioChannelPrototype)> _recentlySent = new();
@@ -139,7 +140,7 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
         if (!args.IsInDetailsRange)
             return;
 
-        var proto = _protoMan.Index<RadioChannelPrototype>(component.BroadcastChannel);
+        var proto = ProtoMan.Index<RadioChannelPrototype>(component.BroadcastChannel);
 
         using (args.PushGroup(nameof(RadioMicrophoneComponent)))
         {
@@ -148,21 +149,22 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
                 ("channel", proto.LocalizedName)));
         }
     }
-
+    
     private void OnListen(EntityUid uid, RadioMicrophoneComponent component, ListenEvent args)
     {
         if (HasComp<RadioSpeakerComponent>(args.Source))
             return; // no feedback loops please.
 
-        var channel = _protoMan.Index<RadioChannelPrototype>(component.BroadcastChannel)!;
-        if (_recentlySent.Add((args.Message, args.Source, channel)))
-            _radio.SendRadioMessage(args.Source, args.Message, channel, uid);
+        var channel = ProtoMan.Index<RadioChannelPrototype>(component.BroadcastChannel)!;
+        if (_recentlySent.Add((args.Message.OriginalMessage, args.Source, channel))) // DEN: Languages
+            _radio.SendRadioMessage(args.Source, args.LanguageEnt, args.Message, channel, uid); // DEN: Languages
     }
 
     private void OnAttemptListen(EntityUid uid, RadioMicrophoneComponent component, ListenAttemptEvent args)
     {
         if (component.PowerRequired && !this.IsPowered(uid, EntityManager)
-            || component.UnobstructedRequired && !_interaction.InRangeUnobstructed(args.Source, uid, 0))
+            || component.UnobstructedRequired && !_interaction.InRangeUnobstructed(args.Source, uid, 0)
+            || !_radioLang.HasComp(args.LanguageEnt)) // DEN: Languages
         {
             args.Cancel();
         }
@@ -181,7 +183,15 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
             ("originalName", nameEv.VoiceName));
 
         // log to chat so people can identity the speaker/source, but avoid clogging ghost chat if there are many radios
-        _chat.TrySendInGameICMessage(uid, args.Message, InGameICChatType.Whisper, ChatTransmitRange.GhostRangeLimit, nameOverride: name, checkRadioPrefix: false);
+        _chat.SendEntityComplexSpeech(uid,
+            args.Message,
+            ChatSystem.WhisperWrapper,
+            ChatChannel.Whisper,
+            ChatTransmitRange.GhostRangeLimit,
+            null,
+            name,
+            verbOverride: args.Verb,
+            languageOverride: args.LanguageEnt); // DEN: Languages
     }
 
     private void OnIntercomEncryptionChannelsChanged(Entity<IntercomComponent> ent, ref EncryptionChannelsChangedEvent args)
@@ -220,7 +230,7 @@ public sealed class RadioDeviceSystem : SharedRadioDeviceSystem
         if (ent.Comp.RequiresPower && !this.IsPowered(ent, EntityManager))
             return;
 
-        if (!_protoMan.HasIndex<RadioChannelPrototype>(args.Channel) || !ent.Comp.SupportedChannels.Contains(args.Channel))
+        if (!ProtoMan.HasIndex<RadioChannelPrototype>(args.Channel) || !ent.Comp.SupportedChannels.Contains(args.Channel))
             return;
 
         SetIntercomChannel(ent, args.Channel);

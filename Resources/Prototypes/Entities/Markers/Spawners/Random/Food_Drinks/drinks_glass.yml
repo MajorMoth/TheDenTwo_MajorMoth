@@ -123,6 +123,10 @@
         - id: DrinkShakeWhite
         - id: DrinkTheMartinez
         - id: DrinkMoonshineGlass
+        # Start DEN: Additions
+        # Note: Do NOT add NSFW-oriented glasses here, like aphrodisiacs.
+        - id: DrinkPomegranateJuiceGlass
+        # End DEN
       - !type:GroupSelector #rare
         weight: 0.05
         children:

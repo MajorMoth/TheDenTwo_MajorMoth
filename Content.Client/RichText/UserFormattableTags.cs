@@ -31,4 +31,18 @@ public static class UserFormattableTags
         ..BaseAllowedTags,
         typeof(ScrambleTag)
     ];
+
+    // DEN Start - allow in-message coloring and formatting
+    /// <summary>
+    /// A list of tags that wouldn't cause any issues to render inside a message.
+    /// </summary>
+    public static readonly Type[] ChatAllowedTags =
+    [
+        typeof(BoldItalicTag),
+        typeof(BoldTag),
+        typeof(ColorTag),
+        typeof(ItalicTag),
+        typeof(MonoTag),
+    ];
+    // DEN End
 }

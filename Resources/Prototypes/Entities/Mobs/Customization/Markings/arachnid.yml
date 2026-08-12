@@ -2,7 +2,7 @@
 - type: marking
   id: ArachnidCheliceraeDownwards
   bodyPart: HeadSide
-  groupWhitelist: [Arachnid]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chelicerae.rsi
     state: downwards
@@ -10,7 +10,7 @@
 - type: marking
   id: ArachnidCheliceraeInwards
   bodyPart: HeadSide
-  groupWhitelist: [Arachnid]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chelicerae.rsi
     state: inwards
@@ -19,7 +19,8 @@
 - type: marking
   id: ArachnidAppendagesDefault
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: long_primary
@@ -29,7 +30,8 @@
 - type: marking
   id: ArachnidAppendagesSharp
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: sharp_primary
@@ -39,7 +41,8 @@
 - type: marking
   id: ArachnidAppendagesStingers
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: stingers_primary
@@ -49,7 +52,8 @@
 - type: marking
   id: ArachnidAppendagesZigZag
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: zigzag_primary
@@ -59,7 +63,8 @@
 - type: marking
   id: ArachnidAppendagesCurled
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: curled_primary
@@ -69,7 +74,8 @@
 - type: marking
   id: ArachnidAppendagesChipped
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: chipped_primary
@@ -79,7 +85,8 @@
 - type: marking
   id: ArachnidAppendagesHarvest
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: harvest_primary
@@ -89,7 +96,8 @@
 - type: marking
   id: ArachnidAppendagesShort
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: short_primary
@@ -99,7 +107,8 @@
 - type: marking
   id: ArachnidAppendagesFreaky
   bodyPart: Tail
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, IPC]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/appendages.rsi
     state: freaky_primary
@@ -110,7 +119,8 @@
 - type: marking
   id: ArachnidTorsoStripes
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: stripes
@@ -122,7 +132,8 @@
 - type: marking
   id: ArachnidTorsoSlashes
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: slashes
@@ -134,7 +145,8 @@
 - type: marking
   id: ArachnidTorsoX
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: x
@@ -146,7 +158,8 @@
 - type: marking
   id: ArachnidTorsoCross
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: cross
@@ -158,7 +171,8 @@
 - type: marking
   id: ArachnidTorsoHeart
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: heart
@@ -170,7 +184,8 @@
 - type: marking
   id: ArachnidTorsoHourglass
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: hourglass
@@ -182,7 +197,8 @@
 - type: marking
   id: ArachnidTorsoNailAndHammer
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: nail-and-hammer
@@ -194,7 +210,8 @@
 - type: marking
   id: ArachnidTorsoStar
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: star
@@ -206,7 +223,8 @@
 - type: marking
   id: ArachnidTorsoArrows
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: arrows
@@ -218,7 +236,8 @@
 - type: marking
   id: ArachnidTorsoCore
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: core
@@ -230,7 +249,8 @@
 - type: marking
   id: ArachnidTorsoFiddleback
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: fiddleback
@@ -242,7 +262,8 @@
 - type: marking
   id: ArachnidTorsoSkull
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: skull
@@ -254,7 +275,8 @@
 - type: marking
   id: ArachnidTorsoTarget
   bodyPart: Chest
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/chest.rsi
     state: target
@@ -267,7 +289,8 @@
 - type: marking
   id: ArachnidRArmStripes
   bodyPart: RArm
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/arms.rsi
     state: stripes_right
@@ -279,7 +302,8 @@
 - type: marking
   id: ArachnidLArmStripes
   bodyPart: LArm
-  groupWhitelist: [Arachnid]
+  #speciesRestriction: [Arachnid, SlimePerson, Arachne]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/arms.rsi
     state: stripes_left
@@ -292,7 +316,7 @@
 - type: marking
   id: ArachnidRLegStripes
   bodyPart: RLeg
-  groupWhitelist: [Arachnid]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/legs.rsi
     state: stripes_right
@@ -304,7 +328,7 @@
 - type: marking
   id: ArachnidLLegStripes
   bodyPart: LLeg
-  groupWhitelist: [Arachnid]
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/legs.rsi
     state: stripes_left
@@ -317,8 +341,8 @@
 - type: marking
   id: ArachnidOverlayFuzzy
   bodyPart: Chest
-  forcedColoring: true
-  groupWhitelist: [Arachnid]
+  #forcedColoring: true    # The Den
+  groupWhitelist: [Arachnid, Slime] # The Den - Add Slime.
   sprites:
   - sprite: Mobs/Customization/Arachnid/overlay.rsi
     state: fuzzy

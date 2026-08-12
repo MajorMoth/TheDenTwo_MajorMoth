@@ -214,6 +214,7 @@ namespace Content.Server.Database
             profile.Species = humanoid.Species;
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
+            profile.Voice = humanoid.Voice.ToString();
             profile.Gender = humanoid.Gender.ToString();
             profile.EyeColor = appearance.EyeColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
@@ -319,6 +320,43 @@ namespace Content.Server.Database
 
             await db.DbContext.SaveChangesAsync();
         }
+
+        #endregion
+
+        #region Consent System
+        public async Task<List<ConsentData>> GetConsentData(Guid player, CancellationToken token = default)
+        {
+            await using var db = await GetDb(token);
+
+            var data = db.DbContext.ConsentData.Where(c => c.UserId == player).ToList();
+
+            return data;
+        }
+
+        public async Task SetConsentData(Guid player, string toggleId, bool value)
+        {
+            await using var db = await GetDb();
+
+            var currentConsent = await db.DbContext.ConsentData
+                .SingleOrDefaultAsync(c => c.UserId == player && c.ConsentId == toggleId);
+
+            if (currentConsent == null)
+            {
+                db.DbContext.ConsentData.Add(currentConsent = new ConsentData
+                {
+                    UserId = player,
+                    ConsentId = toggleId,
+                    ConsentValue = value
+                });
+            }
+
+            currentConsent.UserId = player;
+            currentConsent.ConsentId = toggleId;
+            currentConsent.ConsentValue = value;
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
         #endregion
 
         #region Bans
@@ -857,7 +895,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     if (attempt >= maxRetryAttempts)
                     {
                         _opsLog.Error($"Max retry attempts reached. Failed to save {logs.Count} admin logs.");
-                        return;
+                        throw;
                     }
 
                     _opsLog.Warning($"Retrying in {retryDelay.TotalSeconds} seconds...");
@@ -1237,24 +1275,37 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         public async Task<List<IAdminRemarksRecord>> GetAllAdminRemarks(Guid player)
         {
-            await using var db = await GetDb();
-            List<IAdminRemarksRecord> notes = new();
-            notes.AddRange(
-                (await (from note in db.DbContext.AdminNotes
-                        where note.PlayerUserId == player &&
-                              !note.Deleted &&
-                              (note.ExpirationTime == null || DateTime.UtcNow < note.ExpirationTime)
-                        select note)
-                    .Include(note => note.Round)
-                    .ThenInclude(r => r!.Server)
-                    .Include(note => note.CreatedBy)
-                    .Include(note => note.LastEditedBy)
-                    .Include(note => note.Player)
-                    .ToListAsync()).Select(MakeAdminNoteRecord));
-            notes.AddRange(await GetActiveWatchlistsImpl(db, player));
-            notes.AddRange(await GetMessagesImpl(db, player));
-            notes.AddRange(await GetBansAsNotesForUser(db, player));
-            return notes;
+            return await ParallelCollect<IAdminRemarksRecord>(
+                async () =>
+                {
+                    await using var db = await GetDb();
+                    return (await (from note in db.DbContext.AdminNotes
+                            where note.PlayerUserId == player &&
+                                  !note.Deleted &&
+                                  (note.ExpirationTime == null || DateTime.UtcNow < note.ExpirationTime)
+                            select note)
+                        .Include(note => note.Round)
+                        .ThenInclude(r => r!.Server)
+                        .Include(note => note.CreatedBy)
+                        .Include(note => note.LastEditedBy)
+                        .Include(note => note.Player)
+                        .ToListAsync()).Select(MakeAdminNoteRecord);
+                },
+                async () =>
+                {
+                    await using var db = await GetDb();
+                    return await GetActiveWatchlistsImpl(db, player);
+                },
+                async () =>
+                {
+                    await using var db = await GetDb();
+                    return await GetMessagesImpl(db, player);
+                },
+                async () =>
+                {
+                    await using var db = await GetDb();
+                    return await GetBansAsNotesForUser(db, player);
+                });
         }
         public async Task EditAdminNote(int id, string message, NoteSeverity severity, bool secret, Guid editedBy, DateTimeOffset editedAt, DateTimeOffset? expiryTime)
         {
@@ -1497,6 +1548,55 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        #region Denu Settings
+
+        public async Task<string> LoadDenuSettingsJsonAsync(Guid userId)
+        {
+            await using var db = await GetDb();
+
+            var record = await db.DbContext.DenuSettings
+                .FirstOrDefaultAsync(d => d.PlayerUserId == userId);
+
+            return record?.SettingsJson ?? "{}";
+        }
+
+        public async Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson)
+        {
+            await using var db = await GetDb();
+
+            var record = await db.DbContext.DenuSettings
+                .FirstOrDefaultAsync(d => d.PlayerUserId == userId);
+
+            if (record == null)
+            {
+                record = new DenuModel.DenuSettings
+                {
+                    PlayerUserId = userId,
+                    SettingsJson = settingsJson
+                };
+
+                db.DbContext.DenuSettings.Add(record);
+            }
+            else
+            {
+                record.SettingsJson = settingsJson;
+            }
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId)
+        {
+            await using var db = await GetDb();
+
+            return await db.DbContext.Profile
+                .Where(p => p.Preference.UserId == userId)
+                .Select(p => new { p.Slot, p.Id })
+                .ToDictionaryAsync(p => p.Slot, p => p.Id);
+        }
+
+        #endregion
+
         #region Job Whitelists
 
         public async Task<bool> AddJobWhitelist(Guid player, ProtoId<JobPrototype> job)
@@ -1623,6 +1723,68 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        #region Custom vote logging
+
+        public async Task<int> CustomVoteLogAdd(
+            string title,
+            int roundId,
+            Guid? initiator,
+            ImmutableArray<string> options)
+        {
+            await using var db = await GetDb();
+
+            var log = new CustomVoteLog
+            {
+                Title = title,
+                RoundId = roundId,
+                InitiatorId = initiator,
+                State = CustomVoteState.Active,
+                TimeCreated = DateTime.UtcNow,
+                Options = options.Select((o, i) => new CustomVoteLogOption
+                    {
+                        Text = o,
+                        OptionIdx = (short)i,
+                        VoteCount = 0,
+                    })
+                    .ToList(),
+            };
+
+            db.DbContext.CustomVoteLog.Add(log);
+            await db.DbContext.SaveChangesAsync();
+
+            return log.Id;
+        }
+
+        public async Task CustomVoteLogFinish(int voteId, ImmutableArray<int> voteCounts)
+        {
+            await using var db = await GetDb();
+
+            var log = await db.DbContext.CustomVoteLog
+                .Include(cvl => cvl.Options)
+                .SingleAsync(v => v.Id == voteId);
+
+            log.State = CustomVoteState.Finished;
+
+            for (var i = 0; i < log.Options!.Count; i++)
+            {
+                log.Options[i].VoteCount = voteCounts[i];
+            }
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task CustomVoteLogCancel(int voteId)
+        {
+            await using var db = await GetDb();
+
+            var log = await db.DbContext.CustomVoteLog.SingleAsync(v => v.Id == voteId);
+            log.State = CustomVoteState.Cancelled;
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        #endregion
+
         public abstract Task SendNotification(DatabaseNotification notification);
 
         // SQLite returns DateTime as Kind=Unspecified, Npgsql actually knows for sure it's Kind=Utc.
@@ -1679,6 +1841,13 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             }
 
             return [..results];
+        }
+
+        private static async Task<List<T>> ParallelCollect<T>(params IEnumerable<Func<Task<IEnumerable<T>>>> tasks)
+        {
+            var taskInstances = tasks.Select(a => a());
+            var results = await Task.WhenAll(taskInstances);
+            return results.SelectMany(x => x).ToList();
         }
     }
 }

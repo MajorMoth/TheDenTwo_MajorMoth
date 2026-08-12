@@ -1,0 +1,383 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "(Baum, Blunt Bangs, Combed, Combed Bob, Geisha, Long Side Part Straight, Slightly Messy) by Lancer411 of TauCeti, (Amazon, Astolfo, Blunt Bangs Alt, Fortuneteller Alt, Froofy Long, Glam Metal, Long Dualtails) by Yulianz of TauCeti, Cotton by Loriko.naderi of TauCeti, all prior edited by WerewolfBoyfriend (Github) taken from https://github.com/Skyrat-SS13/Skyrat-tg/blob/6c77aa13992d15f72c283147fed0bff2bb1bbee8/modular_skyrat/modules/customization/icons/mob/sprite_accessory/hair.dmi; (Beach Wave, Sabitsuki) by Gob taken from https://github.com/Skyrat-SS13/Skyrat-tg/blob/5232b8d24cdbdf23c2c086e959857da60f6fe372/modular_skyrat/master_files/icons/mob/sprite_accessory/hair.dmi; (Braided Front Alt, Gentle Bun, Gentle Bun Duo, Holo Tuber, Jay, Phoenix, Phoenix Half Shaven, Ringtails, Runner, Runner Bun, Short Tassels, Spikey, Spikey Long, Stacy, Stacy Bun, Tri Bun, Tri Bun Long, Violet, Violet Ponytail, Zoey) by Crumpaloo taken from https://github.com/Skyrat-SS13/Skyrat-tg/blob/7cb7edd89712ba519b4fb4106048ebe7b1afe69c/modular_skyrat/master_files/icons/mob/sprite_accessory/hair.dmi; (Braided Sidetail, Firestarter, Halfcut, Halfcut Rough, Impish, Mia, Punktails, Royal Curls) taken from https://github.com/DopplerShift13/DopplerShift/blob/942bea821aa705fd16602f50c3632e4ec7354ab6/modular_doppler/modular_customization/accessories/icons/hair.dmi; (Bun Head 4, Dave, Fluffy Short, Grande, Long Hair 4, Short Mohawk, Poofy 2, Rowbraid, Row Dualtail, Scully, Shy, Sleaze, Toriyama, Viper, Volaju Alt, Ziegler) taken from https://github.com/Skyrat-SS13/Skyrat-tg/blob/5597adb287456ea9fb243a5e29c94e6d478ccbcd/modular_skyrat/modules/customization/icons/mob/sprite_accessory/hair.dmi; Cotton Alt by NeonNik2245 (Github) of NovaSector; (Curly, Dreadlocks Long, Jessica, Twintail) by MortoSasye (Github) of NovaSector; (Diagonal Bangs, Loose Slicked) by EikoBiko (Github) of Skyrat; (Diagonal Bangs Alt, Fluffy Bangs) edited by wivernshy (Github) of NovaSector; Gloomy Longer by cherdaq (Github) of Skyrat; (Gloomy Medium, Gloomy Long) by EikoBiko (Github) all Gloomy styles edited by vinylspiders (Github) of NovaSector; Hairfre taken from https://github.com/quotefox/Hyper-Station-13/blob/992e168cd6d69b01bd9f572762ddb08f340d8d76/icons/mob/human_face.dmi; (Halfshave Glamorous, Halfshave Long, Halfshave Messy, Halfshave Messy Long) by Draganfrukts (Github) of Skyrat; Hyena Mane by ToonClyde (Github) of Hyper-Station-13; Inari taken from https://github.com/Citadel-Station-13/Citadel-Station-13/blob/6d81996d8b190b45c2c31a2669ceb0f888037115/icons/mob/hair.dmi; Kajam by mihana964 (Github) of NovaSector; (Lila, Long Over Eye Alt) by desertmote (Github) of NovaSector/Skyrat; Mermaid, Royal Curls by Draggeru (Github) of NovaSector; Mcsqueeb by kittysmooch (Github) of NovaSector; Medium Braid by Zenitheevee (Github) of Skyrat; New You by Les Porter taken from https://github.com/Skyrat-SS13/Skyrat-tg/blob/cb72f5b2b75faa87e2586815b66ccc7673387754/modular_skyrat/modules/customization/icons/mob/sprite_accessory/hair.dmi; Spicy by waodo (Discord) edited by MortoSasye (Github) of NovaSector; (Strict, Strict Long, Strict Short) by Smol42 (Github) of Skyrat",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "hair_amazon",
+      "directions": 4
+    },
+    {
+      "name": "hair_astolfo",
+      "directions": 4
+    },
+    {
+      "name": "hair_baum",
+      "directions": 4
+    },
+    {
+      "name": "hair_beachwave",
+      "directions": 4
+    },
+    {
+      "name": "hair_bluntbangs",
+      "directions": 4
+    },
+    {
+      "name": "hair_bluntbangs_alt",
+      "directions": 4
+    },
+    {
+      "name": "hair_braided_front",
+      "directions": 4
+    },
+    {
+      "name": "hair_braided_sidetail",
+      "directions": 4
+    },
+    {
+      "name": "hair_bunhead4",
+      "directions": 4
+    },
+    {
+      "name": "hair_combed",
+      "directions": 4
+    },
+    {
+      "name": "hair_combedbob",
+      "directions": 4
+    },
+    {
+      "name": "hair_cotton",
+      "directions": 4
+    },
+    {
+      "name": "hair_cottonalt",
+      "directions": 4
+    },
+    {
+      "name": "hair_curly",
+      "directions": 4
+    },
+    {
+      "name": "hair_dave",
+      "directions": 4
+    },
+    {
+      "name": "hair_diagonal_bangs",
+      "directions": 4
+    },
+    {
+      "name": "hair_diagonal_bangs_alt",
+      "directions": 4
+    },
+    {
+      "name": "hair_dreadlocks_long",
+      "directions": 4
+    },
+    {
+      "name": "hair_firestarter",
+      "directions": 4
+    },
+    {
+      "name": "hair_fluffy_bangs",
+      "directions": 4
+    },
+    {
+      "name": "hair_fluffy_short",
+      "directions": 4
+    },
+    {
+      "name": "hair_fortuneteller",
+      "directions": 4
+    },
+    {
+      "name": "hair_fortuneteller_alt",
+      "directions": 4
+    },
+    {
+      "name": "hair_froofylong",
+      "directions": 4
+    },
+    {
+      "name": "hair_geisha",
+      "directions": 4
+    },
+    {
+      "name": "hair_gentle_bun",
+      "directions": 4
+    },
+    {
+      "name": "hair_gentle_duo_bun",
+      "directions": 4
+    },
+    {
+      "name": "hair_glammetal",
+      "directions": 4
+    },
+    {
+      "name": "hair_gloomy_long",
+      "directions": 4
+    },
+    {
+      "name": "hair_gloomy_longer",
+      "directions": 4
+    },
+    {
+      "name": "hair_gloomy_medium",
+      "directions": 4
+    },
+    {
+      "name": "hair_grande",
+      "directions": 4
+    },
+    {
+      "name": "hair_hairfre",
+      "directions": 4
+    },
+    {
+      "name": "hair_halfcut",
+      "directions": 4
+    },
+    {
+      "name": "hair_halfcut_rough",
+      "directions": 4
+    },
+    {
+      "name": "hair_holo_tuber",
+      "directions": 4
+    },
+    {
+      "name": "hair_hyenamane",
+      "directions": 4
+    },
+    {
+      "name": "hair_impish",
+      "directions": 4
+    },
+    {
+      "name": "hair_jay",
+      "directions": 4
+    },
+    {
+      "name": "hair_jessica",
+      "directions": 4
+    },
+    {
+      "name": "hair_kajam",
+      "directions": 4
+    },
+    {
+      "name": "hair_lila",
+      "directions": 4
+    },
+    {
+      "name": "hair_long4",
+      "directions": 4
+    },
+    {
+      "name": "hair_longdtails",
+      "directions": 4
+    },
+    {
+      "name": "hair_longovereye_alt",
+      "directions": 4
+    },
+    {
+      "name": "hair_longsidepartstraight",
+      "directions": 4
+    },
+    {
+      "name": "hair_loose_slicked",
+      "directions": 4
+    },
+    {
+      "name": "hair_mcsqueeb",
+      "directions": 4
+    },
+    {
+      "name": "hair_mediumbraid",
+      "directions": 4
+    },
+    {
+      "name": "hair_mermaid",
+      "directions": 4
+    },
+    {
+      "name": "hair_mia",
+      "directions": 4
+    },
+    {
+      "name": "hair_mohawkshort",
+      "directions": 4
+    },
+    {
+      "name": "hair_newyou",
+      "directions": 4
+    },
+    {
+      "name": "hair_phoenix",
+      "directions": 4
+    },
+    {
+      "name": "hair_phoenix_half_shaven",
+      "directions": 4
+    },
+    {
+      "name": "hair_poofy",
+      "directions": 4
+    },
+    {
+      "name": "hair_punktails",
+      "directions": 4
+    },
+    {
+      "name": "hair_quadcurls",
+      "directions": 4
+    },
+    {
+      "name": "hair_ring_tails",
+      "directions": 4
+    },
+    {
+      "name": "hair_rowbraid",
+      "directions": 4
+    },
+    {
+      "name": "hair_rowdualtail",
+      "directions": 4
+    },
+    {
+      "name": "hair_royal_curls",
+      "directions": 4
+    },
+    {
+      "name": "hair_runner",
+      "directions": 4
+    },
+    {
+      "name": "hair_runner_bun",
+      "directions": 4
+    },
+    {
+      "name": "hair_sabitsuki",
+      "directions": 4
+    },
+    {
+      "name": "hair_scully",
+      "directions": 4
+    },
+    {
+      "name": "hair_short_tassles",
+      "directions": 4
+    },
+    {
+      "name": "hair_shy",
+      "directions": 4
+    },
+    {
+      "name": "hair_sleaze",
+      "directions": 4
+    },
+    {
+      "name": "hair_slightlymessy",
+      "directions": 4
+    },
+    {
+      "name": "hair_spicy",
+      "directions": 4
+    },
+    {
+      "name": "hair_spikey",
+      "directions": 4
+    },
+    {
+      "name": "hair_spikey_long",
+      "directions": 4
+    },
+    {
+      "name": "hair_stacy",
+      "directions": 4
+    },
+    {
+      "name": "hair_stacy_bun",
+      "directions": 4
+    },
+    {
+      "name": "hair_strict",
+      "directions": 4
+    },
+    {
+      "name": "hair_strict_long",
+      "directions": 4
+    },
+    {
+      "name": "hair_strict_short",
+      "directions": 4
+    },
+    {
+      "name": "hair_toriyama",
+      "directions": 4
+    },
+    {
+      "name": "hair_tri_bun",
+      "directions": 4
+    },
+    {
+      "name": "hair_tri_bun_long",
+      "directions": 4
+    },
+    {
+      "name": "hair_twintail",
+      "directions": 4
+    },
+    {
+      "name": "hair_violet",
+      "directions": 4
+    },
+    {
+      "name": "hair_violet_ponytail",
+      "directions": 4
+    },
+    {
+      "name": "hair_viper",
+      "directions": 4
+    },
+    {
+      "name": "hair_volajupompless",
+      "directions": 4
+    },
+    {
+      "name": "hair_ziegler",
+      "directions": 4
+    },
+    {
+      "name": "hair_zoey",
+      "directions": 4
+    },
+    {
+      "name": "halfshave_glamorous",
+      "directions": 4
+    },
+    {
+      "name": "halfshave_long",
+      "directions": 4
+    },
+    {
+      "name": "halfshave_messy",
+      "directions": 4
+    },
+    {
+      "name": "halfshave_messylong",
+      "directions": 4
+    },
+    {
+      "name": "inari",
+      "directions": 4
+    }
+  ]
+}

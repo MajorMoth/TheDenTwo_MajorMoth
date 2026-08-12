@@ -1,0 +1,35 @@
+- type: marking
+  id: HijabFashionableVox
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Vox]
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: hijabchicvox
+
+- type: marking
+  id: HijabSimpleVox
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Vox]
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: hijabsimplevox
+
+- type: marking
+  id: TichelSimpleVox
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Vox]
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: tichelsimplevox
+
+- type: marking
+  id: TichelFashionableVox
+  bodyPart: Hair
+  canBeDisplaced: false
+  groupWhitelist: [Vox]
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: tichelfashionablevox

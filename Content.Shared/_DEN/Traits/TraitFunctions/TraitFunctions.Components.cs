@@ -1,3 +1,5 @@
+using Content.Shared.Metabolism;
+using Content.Shared.Whitelist;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
@@ -56,5 +58,37 @@ public sealed partial class AddComponentTrait : ITraitFunction
 
             entityManager.RemoveComponent(owner, comp);
         }
+    }
+}
+
+/// <summary>
+///     A trait that adds a metabolizer to this entity's organs.
+/// </summary>
+[UsedImplicitly]
+public sealed partial class AddMetabolizerTrait : ITraitFunction
+{
+    /// <summary>
+    ///     A set of metabolizers to add to this entity's organs.
+    /// </summary>
+    [DataField] public HashSet<ProtoId<MetabolizerTypePrototype>> MetabolizerTypes = [];
+
+    /// <summary>
+    ///     A whitelist of allowed organs to use for this trait.
+    /// </summary>
+    /// <remarks>
+    ///     For example: you can have this only apply to the heart or lungs by whitelisting Heart or Lung components.
+    /// </remarks>
+    [DataField] public EntityWhitelist? OrganWhitelist = null;
+
+    public void OnTraitAdded(EntityUid owner, EntityManager entityManager)
+    {
+        var ev = new AddTraitMetabolizerEvent(MetabolizerTypes, OrganWhitelist);
+        entityManager.EventBus.RaiseLocalEvent(owner, ref ev);
+    }
+
+    public void OnTraitRemoved(EntityUid owner, EntityManager entityManager)
+    {
+        var ev = new RemoveTraitMetabolizerEvent(MetabolizerTypes, OrganWhitelist);
+        entityManager.EventBus.RaiseLocalEvent(owner, ref ev);
     }
 }

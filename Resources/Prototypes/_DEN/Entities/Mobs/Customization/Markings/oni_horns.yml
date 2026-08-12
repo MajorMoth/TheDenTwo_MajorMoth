@@ -1,0 +1,545 @@
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornTallCurved
+# #parent: BaseHornsMarking #TheDenTwo | We dont have marking heritance.
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_curved
+
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornTallCurved3Tone
+#  #parent: BaseHornsMarking #TheDenTwo | Still no marking heritance.
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_curved_3tone_1
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_curved_3tone_2
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_curved_3tone_3
+
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornTallBull
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_bull
+
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornTallBull3Tone
+#  #parent: BaseHornsMarking #TheDenTwo | No heritance
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_bull_3tone_1
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_bull_3tone_2
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: tall_bull_3tone_3
+
+- type: marking
+  id: OniHornCrowned
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: crowned
+
+- type: marking
+  id: OniHornSerket
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: serket
+
+- type: marking
+  id: OniHornSerket3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: serket_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: serket_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: serket_3tone_3
+
+- type: marking
+  id: OniHornPisces
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces
+
+- type: marking
+  id: OniHornPisces2Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces_2tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces_2tone_2
+
+- type: marking
+  id: OniHornPisces3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: pisces_3tone_3
+
+- type: marking
+  id: OniHornVirgo
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: virgo
+
+- type: marking
+  id: OniHornVirgo3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: virgo_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: virgo_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: virgo_3tone_3
+
+- type: marking
+  id: OniHornSagittarius
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: sagittarius
+
+- type: marking
+  id: OniHornSagittarius3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: sagittarius_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: sagittarius_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: sagittarius_3tone_3
+
+- type: marking
+  id: OniHornVantas
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: vantas
+
+- type: marking
+  id: OniHornVantas3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: vantas_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: vantas_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: vantas_3tone_3
+
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornMakara2Tone
+#  #parent: BaseHornsMarking #TheDenTwo | No heritance
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: makara_2tone_1
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: makara_2tone_2
+
+# TheDenTwo | commented out due to clipping sprite
+#- type: marking
+#  id: OniHornMakara3Tone
+#  #parent: BaseHornsMarking #TheDenTwo | No heritance
+#  bodyPart: HeadTop
+#  groupWhitelist: [Human]
+#  sprites:
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: makara_3tone_1
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: makara_3tone_2
+#  - sprite: _DEN/Mobs/Customization/Human/oni_horns48x48.rsi
+#    state: makara_3tone_3
+
+- type: marking
+  id: OniHornNepeta
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: nepeta
+
+- type: marking
+  id: OniHornNepeta3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: nepeta_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: nepeta_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: nepeta_3tone_3
+
+- type: marking
+  id: OniHornTaurus
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus
+
+- type: marking
+  id: OniHornTaurus2Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus_2tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus_2tone_2
+
+- type: marking
+  id: OniHornTaurus3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: taurus_3tone_3
+
+- type: marking
+  id: OniHornAries
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: aries
+
+- type: marking
+  id: OniHornAries3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: aries_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: aries_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: aries_3tone_3
+
+- type: marking
+  id: OniHornTavris
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: tavris
+
+- type: marking
+  id: OniHornTavris3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: tavris_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: tavris_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: tavris_3tone_3
+
+- type: marking
+  id: OniHornInclined
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: inclined
+
+- type: marking
+  id: OniHornInclined3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: inclined_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: inclined_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: inclined_3tone_3
+
+- type: marking
+  id: OniHornWavy
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy
+
+- type: marking
+  id: OniHornWavy2Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy_2tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy_2tone_2
+
+- type: marking
+  id: OniHornWavy3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: wavy_3tone_3
+
+- type: marking
+  id: OniHornAntlers
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: antlers_2tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: antlers_2tone_2
+
+- type: marking
+  id: OniHornAntlers3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: antlers_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: antlers_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: antlers_3tone_3
+
+- type: marking
+  id: OniHornUnicorn
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: unicorn
+
+- type: marking
+  id: OniHornErebia
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia
+
+- type: marking
+  id: OniHornErebia3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia_3tone_3
+
+- type: marking
+  id: OniHornErebiaRings
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: erebia_rings
+
+- type: marking
+  id: OniHornDoubleThick2Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_thick_2tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_thick_2tone_2
+
+- type: marking
+  id: OniHornDoubleThick3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_thick_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_thick_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_thick_3tone_3
+
+- type: marking
+  id: OniHornDoubleCurved3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_3tone_3
+
+- type: marking
+  id: OniHornDoubleCurvedOutwards3Tone
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_outwards_3tone_1
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_outwards_3tone_2
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_outwards_3tone_3
+
+- type: marking
+  id: OniHornSingleCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: single_curved
+
+- type: marking
+  id: OniHornSingleLeftCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: single_left_curved
+
+- type: marking
+  id: OniHornSingleRightCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: single_right_curved
+
+- type: marking
+  id: OniHornDoubleCurvedOutwards
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved_outwards
+
+- type: marking
+  id: OniHornDoubleCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_curved
+
+- type: marking
+  id: OniHornDoubleLeftBrokeCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_left_broke_curved
+
+- type: marking
+  id: OniHornDoubleRightBrokeCurved
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: double_right_broke_curved
+
+- type: marking
+  id: OniHornShaved
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: shaved
+
+- type: marking
+  id: OniHornBull
+  #parent: BaseHornsMarking #TheDenTwo | No heritance
+  bodyPart: HeadTop
+  groupWhitelist: [Human]
+  sprites:
+  - sprite: _DEN/Mobs/Customization/Human/oni_horns.rsi
+    state: bull

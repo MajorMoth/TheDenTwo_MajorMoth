@@ -1,0 +1,80 @@
+- type: reagent
+  abstract: true
+  id: BaseLewdReagent
+  group: Lewd
+  recognizable: true # Lewd reagents should always be recognizable to prevent accidental consumption
+
+- type: reagent
+  abstract: true
+  parent: BaseLewdReagent
+  id: BaseAphrodisiac
+  group: Aphrodisiacs
+
+- type: reagent
+  parent: BaseAphrodisiac
+  id: Pomelustine
+  name: reagent-name-pomelustine
+  desc: reagent-desc-pomelustine
+  physicalDesc: reagent-physical-desc-sticky
+  flavor: fruity
+  color: "#4b012c"
+  metabolisms:
+    Metabolites:
+      metabolismRate: 0.01
+      effects:
+        # Basic effect: "Aphrodisiac" flavor text.
+        # At 0.01u / second, each 10u will last about ~16.6 minutes.
+        # 50u will last ~83.3 minutes in the bloodstream.
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectMildAphrodisiac
+          type: Update
+          time: 10 # This is so it doesn't expire while you're metabolizing other things
+        # Overdose at 50u: Drunkenness / vomiting.
+        # Above this level, pomelustine is also flushed out of your system 5x as fast.
+        # Each unit above 50u lasts 20 seconds, instead of 100 seconds.
+        # 60u will last ~86.7 minutes total.
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectMildAphrodisiacOverdose
+          type: Update
+          time: 10 # This is so it doesn't expire while you're metabolizing other things
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 50
+        - !type:Drunk
+          boozePower: 2
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 50
+        - !type:Vomit
+          probability: 0.02
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 50
+        - !type:AdjustReagent
+          reagent:  Pomelustine
+          amount: -0.04
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 50
+        # 60u and above: Poison damage.
+        # Pomelustine is flushed out 20x as fast above this threshold - 5 seconds per unit above 60u.
+        # 70u will last 87.5 minutes total. Each 10u above 60u lasts 50 seconds.
+        - !type:HealthChange
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 60
+          damage:
+            types:
+              Poison: 0.5
+        - !type:AdjustReagent
+          reagent:  Pomelustine
+          amount: -0.15
+          conditions:
+          - !type:ReagentCondition
+            reagent: Pomelustine
+            min: 60

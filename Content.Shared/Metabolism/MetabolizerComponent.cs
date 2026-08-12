@@ -85,6 +85,7 @@ public sealed partial class MetabolizerComponent : Component
     /// </summary>
     [DataField]
     [Access(typeof(MetabolizerSystem), Other = AccessPermissions.ReadExecute)] // FIXME Friends
+    [AutoNetworkedField] // DEN
     public HashSet<ProtoId<MetabolizerTypePrototype>>? MetabolizerTypes;
 
     /// <summary>

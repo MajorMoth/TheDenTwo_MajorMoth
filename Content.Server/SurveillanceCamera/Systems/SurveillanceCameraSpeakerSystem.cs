@@ -1,5 +1,7 @@
+using System.Linq;
 using Content.Server.Chat.Systems;
 using Content.Server.Speech;
+using Content.Server.SurveillanceCamera.Systems;
 using Content.Shared.Speech;
 using Content.Shared.Chat;
 using Robust.Shared.Audio.Systems;
@@ -10,12 +12,12 @@ namespace Content.Server.SurveillanceCamera;
 /// <summary>
 ///     This handles speech for surveillance camera monitors.
 /// </summary>
-public sealed class SurveillanceCameraSpeakerSystem : EntitySystem
+public sealed partial class SurveillanceCameraSpeakerSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly SpeechSoundSystem _speechSound = default!;
-    [Dependency] private readonly ChatSystem _chatSystem = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private SharedAudioSystem _audioSystem = default!;
+    [Dependency] private SpeechSoundSystem _speechSound = default!;
+    [Dependency] private ChatSystem _chatSystem = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -39,7 +41,8 @@ public sealed class SurveillanceCameraSpeakerSystem : EntitySystem
         if (time - component.LastSoundPlayed < cd
             && TryComp<SpeechComponent>(args.Speaker, out var speech))
         {
-            var sound = _speechSound.GetSpeechSound((args.Speaker, speech), args.Message);
+            var sound = _speechSound.GetSpeechSound((args.Speaker, speech),
+                args.Message.Parts.LastOrDefault(part => part.Item1 == ChatPart.Dialog).Item2); // DEN: Complex Speech
             _audioSystem.PlayPvs(sound, uid);
 
             component.LastSoundPlayed = time;
@@ -52,6 +55,14 @@ public sealed class SurveillanceCameraSpeakerSystem : EntitySystem
             ("originalName", nameEv.VoiceName));
 
         // log to chat so people can identity the speaker/source, but avoid clogging ghost chat if there are many radios
-        _chatSystem.TrySendInGameICMessage(uid, args.Message, InGameICChatType.Speak, ChatTransmitRange.GhostRangeLimit, nameOverride: name);
+        _chatSystem.SendEntityComplexSpeech(uid,
+            args.Message,
+            ChatSystem.SpeakWrapper,
+            ChatChannel.Whisper,
+            ChatTransmitRange.GhostRangeLimit,
+            null,
+            name,
+            verbOverride: args.Verb,
+            languageOverride: args.LanguageEnt); // DEN: Complex Speech and Languages.
     }
 }

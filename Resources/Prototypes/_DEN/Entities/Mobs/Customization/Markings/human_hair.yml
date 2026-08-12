@@ -1,0 +1,1674 @@
+# Den #
+- type: marking
+  id: amazon
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_amazon
+
+- type: marking
+  id: astolfo
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_astolfo
+
+- type: marking
+  id: baum
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_baum
+
+- type: marking
+  id: beachwave
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_beachwave
+
+- type: marking
+  id: bluntbangs
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_bluntbangs
+
+- type: marking
+  id: bluntbangs_alt
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_bluntbangs_alt
+
+- type: marking
+  id: braided_front
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_braided_front
+
+- type: marking
+  id: braided_sidetail
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_braided_sidetail
+
+- type: marking
+  id: bunhead4
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_bunhead4
+
+- type: marking
+  id: combed
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_combed
+
+- type: marking
+  id: combedbob
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_combedbob
+
+- type: marking
+  id: cotton
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_cotton
+
+- type: marking
+  id: cottonalt
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_cottonalt
+
+- type: marking
+  id: curly
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_curly
+
+- type: marking
+  id: dave
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_dave
+
+- type: marking
+  id: diagonal_bangs
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_diagonal_bangs
+
+- type: marking
+  id: diagonal_bangs_alt
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_diagonal_bangs_alt
+
+- type: marking
+  id: dreadlocks_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_dreadlocks_long
+
+- type: marking
+  id: firestarter
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_firestarter
+
+- type: marking
+  id: fluffy_bangs
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_fluffy_bangs
+
+- type: marking
+  id: fluffy_short
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_fluffy_short
+
+- type: marking
+  id: fortuneteller
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_fortuneteller
+
+- type: marking
+  id: fortuneteller_alt
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_fortuneteller_alt
+
+- type: marking
+  id: froofylong
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_froofylong
+
+- type: marking
+  id: geisha
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_geisha
+
+- type: marking
+  id: gentle_bun
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_gentle_bun
+
+- type: marking
+  id: gentle_duo_bun
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_gentle_duo_bun
+
+- type: marking
+  id: glammetal
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_glammetal
+
+- type: marking
+  id: gloomy_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_gloomy_long
+
+- type: marking
+  id: gloomy_longer
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_gloomy_longer
+
+- type: marking
+  id: gloomy_medium
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_gloomy_medium
+
+- type: marking
+  id: grande
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_grande
+
+- type: marking
+  id: hairfre
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_hairfre
+
+- type: marking
+  id: halfcut
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_halfcut
+
+- type: marking
+  id: halfcut_rough
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_halfcut_rough
+
+- type: marking
+  id: halfshave_glamorous
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: halfshave_glamorous
+
+- type: marking
+  id: halfshave_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: halfshave_long
+
+- type: marking
+  id: halfshave_messy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: halfshave_messy
+
+- type: marking
+  id: halfshave_messylong
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: halfshave_messylong
+
+- type: marking
+  id: holo_tuber
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_holo_tuber
+
+- type: marking
+  id: hyenamane
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_hyenamane
+
+- type: marking
+  id: impish
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_impish
+
+- type: marking
+  id: jay
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_jay
+
+- type: marking
+  id: jessica
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_jessica
+
+- type: marking
+  id: kajam
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_kajam
+
+- type: marking
+  id: inari
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: inari
+
+- type: marking
+  id: lila
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_lila
+
+- type: marking
+  id: long4
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_long4
+
+- type: marking
+  id: longdtails
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_longdtails
+
+- type: marking
+  id: longovereye_alt
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_longovereye_alt
+
+- type: marking
+  id: longsidepartstraight
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_longsidepartstraight
+
+- type: marking
+  id: longsmoothie
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/haircepha.rsi
+      state: longsmoothie
+
+- type: marking
+  id: loose_slicked
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_loose_slicked
+
+- type: marking
+  id: mcsqueeb
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_mcsqueeb
+
+- type: marking
+  id: mediumbraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_mediumbraid
+
+- type: marking
+  id: mera
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/mera.rsi
+      state: hair_mera
+
+- type: marking
+  id: mermaid
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_mermaid
+
+- type: marking
+  id: mia
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_mia
+
+- type: marking
+  id: mohawkshort
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_mohawkshort
+
+- type: marking
+  id: newyou
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_newyou
+
+- type: marking
+  id: phoenix
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_phoenix
+
+- type: marking
+  id: phoenix_half_shaven
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_phoenix_half_shaven
+
+- type: marking
+  id: poofy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_poofy
+
+- type: marking
+  id: punktails
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_punktails
+
+- type: marking
+  id: quadcurls
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_quadcurls
+
+- type: marking
+  id: ring_tails
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_ring_tails
+
+- type: marking
+  id: rowbraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_rowbraid
+
+- type: marking
+  id: rowdualtail
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_rowdualtail
+
+- type: marking
+  id: royal_curls
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_royal_curls
+
+- type: marking
+  id: runner
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_runner
+
+- type: marking
+  id: runner_bun
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_runner_bun
+
+- type: marking
+  id: sabitsuki
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_sabitsuki
+
+- type: marking
+  id: scully
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_scully
+
+- type: marking
+  id: short_tassles
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_short_tassles
+
+- type: marking
+  id: shortbob
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/haircepha.rsi
+      state: shortbob
+
+- type: marking
+  id: shortside
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/haircepha.rsi
+      state: shortside
+
+- type: marking
+  id: shy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_shy
+
+- type: marking
+  id: sleaze
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_sleaze
+
+- type: marking
+  id: slightlymessy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_slightlymessy
+
+- type: marking
+  id: spicy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_spicy
+
+- type: marking
+  id: spikey
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_spikey
+
+- type: marking
+  id: spikey_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_spikey_long
+
+- type: marking
+  id: stacy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_stacy
+
+- type: marking
+  id: stacy_bun
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_stacy_bun
+
+- type: marking
+  id: strict
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_strict
+
+- type: marking
+  id: strict_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_strict_long
+
+- type: marking
+  id: strict_short
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_strict_short
+
+- type: marking
+  id: toriyama
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_toriyama
+
+- type: marking
+  id: tri_bun
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_tri_bun
+
+- type: marking
+  id: tri_bun_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_tri_bun_long
+
+- type: marking
+  id: twintail
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_twintail
+
+- type: marking
+  id: twintailsberly
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/haircepha.rsi
+      state: twintailsberly
+
+- type: marking
+  id: violet
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_violet
+
+- type: marking
+  id: violet_ponytail
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_violet_ponytail
+
+- type: marking
+  id: viper
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_viper
+
+- type: marking
+  id: volajupompless
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_volajupompless
+
+- type: marking
+  id: ziegler
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_ziegler
+
+- type: marking
+  id: zoey
+  bodyPart: Hair
+  sprites:
+    - sprite: _DEN/Mobs/Customization/Hair/hairdoppler.rsi
+      state: hair_zoey
+
+# Impstation #
+- type: marking
+  id: HumanHairGatheredlow
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: gatheredlow
+
+- type: marking
+  id: HumanHairLowpigtails
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: lowpigtails
+
+- type: marking
+  id: HumanHairFrenchBraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: frenchbraid
+
+- type: marking
+  id: HumanHairMessyPonytail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: messyponytail
+
+- type: marking
+  id: HumanHairShaggy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: shaggy
+
+- type: marking
+  id: HumanHairShaggyLonger
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: shaggylonger
+
+- type: marking
+  id: HumanHairShaggyMessy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: shaggymessy
+
+- type: marking
+  id: HumanHairSusie
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: susie
+
+- type: marking
+  id: HumanHairSusieNoBangs
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: susienobangs
+
+- type: marking
+  id: HumanHairEyeBangLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: eyebanglong
+
+- type: marking
+  id: HumanHairEyeBangShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: eyebangshort
+
+- type: marking
+  id: HumanHairEyeBangSideTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: eyebangsidetail
+
+- type: marking
+  id: HumanHairOverEyes
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: overeyes
+
+- type: marking
+  id: HumanHairOverEyesTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: overeyestail
+
+- type: marking
+  id: HumanHairOverEyesLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: overeyeslong
+
+- type: marking
+  id: HumanHairFringeTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: fringetail
+
+- type: marking
+  id: HumanHairFringeRat
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: fringerat
+
+- type: marking
+  id: HumanHairAsymBun
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: asymbun
+
+- type: marking
+  id: HumanHairIntakeShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: intakeshort
+
+- type: marking
+  id: HumanHairIntakeLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: intakelong
+
+- type: marking
+  id: HumanHairLiberatorTied
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: liberatortied
+
+- type: marking
+  id: HumanHairLiberatorShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: liberatorshort
+
+- type: marking
+  id: HumanHairLiberatorLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: liberatorlong
+
+- type: marking
+  id: HumanHairDrillTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: drilltail
+
+- type: marking
+  id: HumanHairBraidMed
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: braidmed
+
+- type: marking
+  id: HumanHairLocsTied
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: locstied
+
+- type: marking
+  id: HumanHairCurlyPerm
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: curlyperm
+
+- type: marking
+  id: HumanHairPosterPerson
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: posterperson
+
+- type: marking
+  id: HumanHairSmiler
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: smiler
+
+- type: marking
+  id: HumanHairWavyLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: wavylong
+
+- type: marking
+  id: HumanHairMiddlePartShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: middlepartshort
+
+- type: marking
+  id: HumanHairFadeHighlight
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: fadehighlight
+
+- type: marking
+  id: HumanHairChonmage
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: chonmage
+
+- type: marking
+  id: HumanHairBaldingLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: baldinglong
+
+- type: marking
+  id: HumanHairBaldingCurls
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: baldingcurls
+
+- type: marking
+  id: HumanHairFriar
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: friar
+
+- type: marking
+  id: HumanHairAdoringFan
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: adoringfan
+
+- type: marking
+  id: HumanHairBabyHair
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: babyhair
+
+- type: marking
+  id: HumanHairSpikyPonytailLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/human_hair.rsi
+      state: spikyponytaillong
+
+# Hair Coverings (HUMANOID, other hair coverings elsewhere)
+- type: marking
+  id: BurqaSolid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: burqasolid
+
+- type: marking
+  id: HijabFashionable
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: hijabchic
+
+- type: marking
+  id: HijabSimple
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: hijabsimple
+
+- type: marking
+  id: Niqab
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: niqab
+
+- type: marking
+  id: TichelFashionable
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: tichelfashionable
+
+- type: marking
+  id: TichelSimple
+  bodyPart: Hair
+  sprites:
+    - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+      state: tichelsimple
+
+# EE #
+- type: marking
+  id: HumanHairFlyboy
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: flyboy
+
+- type: marking
+  id: HumanHairOutwardponytail
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: outwardponytail
+
+- type: marking
+  id: HumanHairStubbleshave
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: stubbleshave
+
+- type: marking
+  id: HumanHairCiacombover
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: ciacombover
+
+- type: marking
+  id: HumanHairFullshave
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: fullshave
+
+- type: marking
+  id: HumanHairSergeantcut
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: sergeantcut
+
+- type: marking
+  id: HumanHairHightight
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: hightight
+
+- type: marking
+  id: HumanHairBuzzhawk
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: buzzhawk
+
+- type: marking
+  id: HumanHairShavedbun
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: loosebunshaved
+
+- type: marking
+  id: HumanHairLoosebun
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: loosebun
+
+- type: marking
+  id: HumanHairOvereyeponytail
+  bodyPart: Hair
+  sprites:
+    - sprite: _EE/Mobs/Customization/human_hair.rsi
+      state: overeyeponytail
+
+# Corvax #
+- type: marking
+  id: HumanHairAfricanPigtails
+  bodyPart: Hair
+  sprites:
+    - sprite: _Corvax/Mobs/Customization/human_hair.rsi
+      state: africanpigtails
+
+- type: marking
+  id: HumanHairAfropuffDouble
+  bodyPart: Hair
+  sprites:
+    - sprite: _Corvax/Mobs/Customization/human_hair.rsi
+      state: afropuffdouble
+
+- type: marking
+  id: HumanHairAfropuffLeft
+  bodyPart: Hair
+  sprites:
+    - sprite: _Corvax/Mobs/Customization/human_hair.rsi
+      state: afropuffleft
+
+- type: marking
+  id: HumanHairAfropuffRight
+  bodyPart: Hair
+  sprites:
+    - sprite: _Corvax/Mobs/Customization/human_hair.rsi
+      state: afropuffright
+
+# Goobstation #
+- type: marking
+  id: HumanHairBraidedExtension
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: braidedExtensions
+
+- type: marking
+  id: HumanHairCometTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: cometTail
+
+- type: marking
+  id: HumanHairFantasyHair
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: fantasyHair
+
+- type: marking
+  id: HumanHairFlatTwistsUpdo
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: flatTwistsUpdo
+
+- type: marking
+  id: HumanHairFloorlengthBraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: floorlengthBraid
+
+- type: marking
+  id: HumanHairFloorlengthWavy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: floorlengthWavy
+
+- type: marking
+  id: HumanHairFrontBraidsLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: frontBraidsLong
+
+- type: marking
+  id: HumanHairFrontBraidsMedium
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: frontBraidsMedium
+
+- type: marking
+  id: HumanHairFrontBraidsShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: frontBraidsShort
+
+- type: marking
+  id: HumanHairHairnet
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: hairnet
+
+- type: marking
+  id: HumanHairJellyfish
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: jellyfish
+
+- type: marking
+  id: HumanHairKazuyaMishima
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: kazuyaMishima
+
+- type: marking
+  id: HumanHairLongBraids
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: longBraids
+
+- type: marking
+  id: HumanHairLongCurvy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: longCurvy
+
+- type: marking
+  id: HumanHairLongPompadour
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: longPompadour
+
+- type: marking
+  id: HumanHairMediumCurls
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: mediumCurls
+
+- type: marking
+  id: HumanHairMullet
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: mullet
+
+- type: marking
+  id: HumanHairPelvicLengthBraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: pelvicLengthBraid
+
+- type: marking
+  id: HumanHairPlateau
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: plateau
+
+- type: marking
+  id: HumanHairQueenBee
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: queenBee
+
+- type: marking
+  id: HumanHairSaggedMohawk
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: saggedMohawk
+
+- type: marking
+  id: HumanHairSharpMohawk
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: sharpMohawk
+
+- type: marking
+  id: HumanHairShortAndPoofy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: shortAndPoofy
+
+- type: marking
+  id: HumanHairShortCurls
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: shortCurls
+
+- type: marking
+  id: HumanHairShoulderLengthBraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: shoulderLengthBraid
+
+- type: marking
+  id: HumanHairSideSpike
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: sideSpike
+
+- type: marking
+  id: HumanHairSpaceLoops
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: spaceLoops
+
+- type: marking
+  id: HumanHairStar
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: star
+
+- type: marking
+  id: HumanHairStarFro
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: starFro
+
+- type: marking
+  id: HumanHairStyledCurls
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: styledCurls
+
+- type: marking
+  id: HumanHairUnkemptScientist
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: unkemptScientist
+
+- type: marking
+  id: HumanHairFrizzyBraid
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: frizzyBraid
+
+- type: marking
+  id: HumanHairWispy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Goobstation/Mobs/Customization/human_hair.rsi
+      state: wispy
+
+# ADT #
+- type: marking
+  id: ADTAllhonor
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/hair.rsi
+      state: honor
+
+- type: marking
+  id: ADTAllShavedFemale
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/hair.rsi
+      state: shaved_female
+
+- type: marking
+  id: HumanHairArabicGathered
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-arabicgatheredhair
+
+- type: marking
+  id: HumanHairClassicHair
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-classichairmale
+
+- type: marking
+  id: HumanHairSideComb
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-combedfromside
+
+- type: marking
+  id: HumanHairLong4
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-longhair
+
+- type: marking
+  id: HumanHairManbun2
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-manbunold
+
+- type: marking
+  id: HumanHairPigtailTajaran
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-pigtailtajaran
+
+- type: marking
+  id: HumanHairShavedSide
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-shavedside
+
+- type: marking
+  id: HumanHairShorthair8
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-shorthaired
+
+- type: marking
+  id: HumanFembun
+  bodyPart: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/custom.rsi
+      state: hair-womenbun
+
+# DV #
+- type: marking
+  id: HumanHairShortBedhead
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: short_bedhead
+
+- type: marking
+  id: HumanHairBobClassic
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: classic_bob
+
+- type: marking
+  id: HumanHairMessyClassic
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: classic_messy
+
+- type: marking
+  id: HumanHairClassicGentle
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: classic_gentle
+
+- type: marking
+  id: HumanHairClassicOmbre
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: classic_ombre
+
+- type: marking
+  id: HumanHairClassicLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/hair.rsi
+      state: classic_long
+
+# Nuclear14 #
+- type: marking
+  id: ZetaHairLongSpikehair
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: long_spikehair
+
+- type: marking
+  id: ZetaHairNerfish
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: nerfish
+
+- type: marking
+  id: ZetaHairPlantpoofs
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: plantish_poofs
+
+- type: marking
+  id: ZetaHairQuadspike
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: quadspike
+
+- type: marking
+  id: ZetaHairRattyRoyalty
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: ratty_royalty
+
+- type: marking
+  id: ZetaHairShortMessy
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: short_and_messy
+
+- type: marking
+  id: ZetaHairShortSpikehair
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: short_spikehair
+
+- type: marking
+  id: ZetaHairSpikehawk
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: spikehawk
+
+- type: marking
+  id: ZetaHairPolitical
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: the_political
+
+- type: marking
+  id: ZetaHairZetaBasicBraids
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: zeta_basic_braids
+
+- type: marking
+  id: ZetaHairJohnny
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: the_johnny
+
+- type: marking
+  id: ZetaHairMattedSpikes
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: matted_spikes
+
+- type: marking
+  id: ZetaHairManageableMess
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: manageable_mess
+
+- type: marking
+  id: ZetaHairPoofed
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: poofed
+
+- type: marking
+  id: ZetaHairOverShoulderBraids
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: over_shoulder_braids
+
+- type: marking
+  id: ZetaHairMonk
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: monk
+
+- type: marking
+  id: ZetaHairMiniMattedSpikes
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: mini_matted_spikes
+
+- type: marking
+  id: ZetaHairNaturalMessShort
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: natural_mess_short
+
+- type: marking
+  id: ZetaHairNaturalMessLong
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: natural_mess_long
+
+- type: marking
+  id: ZetaHairFrontSpikes
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: front_spikes
+
+- type: marking
+  id: ZetaHairMessyPonytail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: messy_ponytail
+
+- type: marking
+  id: ZetaHairFaded
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: faded
+
+- type: marking
+  id: ZetaHairHalfsies
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: halfsies
+
+- type: marking
+  id: ZetaHairPorcupine
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: porcupine
+
+- type: marking
+  id: ZetaHairHalfShavedBraids
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: half_shaved_braids
+
+- type: marking
+  id: ZetaHairLoneTail
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: lone_tail
+
+#- type: marking # originally intended for use with radiation features from nuclear 14
+#  id: ZetaHairRadical
+#  bodyPart: Hair
+#  sprites:
+#    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+#      state: radical
+
+#- type: marking # fallout reference. not sure why it's commented out really
+#  id: ZetaHairTunnelSnake
+#  bodyPart: Hair
+#  sprites:
+#    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+#      state: tunnel_snake
+
+- type: marking
+  id: ZetaHairOverTheShoulder
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: over_the_shoulder
+
+- type: marking
+  id: ZetaHairStandardAsymmetry
+  bodyPart: Hair
+  sprites:
+    - sprite: _Nuclear14/Mobs/Customization/hair.rsi
+      state: standard_asymmetry

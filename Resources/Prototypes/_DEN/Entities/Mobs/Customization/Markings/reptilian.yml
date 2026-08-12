@@ -1,0 +1,47 @@
+- type: marking
+  id: BurqaSolidLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: burqalizard
+
+- type: marking
+  id: HijabFashionableLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: hijabchic
+
+- type: marking
+  id: HijabSimpleLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: hijabsimple
+
+- type: marking
+  id: NiqabLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: niqab
+
+- type: marking
+  id: TichelSimpleLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: tichelsimple
+
+- type: marking
+  id: TichelFashionableLizard
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
+    state: tichelfashionable

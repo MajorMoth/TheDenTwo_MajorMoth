@@ -8,6 +8,14 @@
   color: "#848789"
   boilingPoint: 2327.0
   meltingPoint: 660.0
+  metabolisms: # DEN: Aluminium removes aphrodisiacs
+    Metabolites:
+      effects:
+      # Five units will remove 50u of pomelustine.
+      - !type:AdjustReagent
+        reagent:  Pomelustine
+        amount: -5
+        conditions:
 
 - type: reagent
   id: Carbon
@@ -64,7 +72,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid, Gastropoid ] #Macrocosm, added Gastropoid
+          type: [ Arachnid, Gastropoid, Decapoid ] #Macrocosm, added Gastropoid and Deceapoid
           inverted: true
         damage:
           types:
@@ -72,7 +80,7 @@
       - !type:ModifyBloodLevel
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid, Gastropoid ] #Macrocosm, added Gastropoid
+          type: [ Arachnid, Gastropoid, Decapoid ] #Macrocosm, added Gastropoid and Deceapoid
         amount: 0.4
 
 - type: reagent
@@ -152,14 +160,14 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid, Gastropoid ] #Macrocosm, added Gastropoid
+          type: [ Arachnid, Gastropoid, Decapoid ] #Macrocosm, added Gastropoid and Deceapoid
         damage:
           types:
             Poison: 0.1
       - !type:ModifyBloodLevel
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid, Gastropoid ] #Macrocosm, added Gastropoid
+          type: [ Arachnid, Gastropoid, Decapoid ] #Macrocosm, added Gastropoid and Deceapoid
           inverted: true
         amount: 0.4
 

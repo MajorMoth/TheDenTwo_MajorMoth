@@ -93,6 +93,10 @@
     Bloodstream:
       effects:
         - !type:HealthChange
+          conditions: # DEN: Detritivore metabolism
+          - !type:MetabolizerTypeCondition
+            type: [ Detritivore ]
+            inverted: true
           damage:
             types:
               Poison: 2
@@ -101,7 +105,15 @@
           - !type:ReagentCondition
             reagent: GastroToxin
             min: 2
+          - !type:MetabolizerTypeCondition # DEN: Detritivore metabolism
+            type: [ Detritivore ]
+            inverted: true
           probability: 0.2
+        - !type:SatiateHunger # DEN: Detritivore metabolism
+        # DEN Comment: This cannot be in Digestion or the metabolism will break.
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Detritivore ]
 
 - type: reagent
   id: Mold
@@ -116,9 +128,18 @@
     Bloodstream:
       effects:
       - !type:HealthChange
+        conditions: # DEN: Detritivore metabolism
+        - !type:MetabolizerTypeCondition
+          type: [ Detritivore ]
+          inverted: true
         damage:
           types:
             Poison: 1
+      - !type:SatiateHunger # DEN: Detritivores can digest mold.
+      # DEN Comment: This cannot be in Digestion or the metabolism will break.
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Detritivore ]
 
 - type: reagent
   id: PolytrinicAcid
@@ -454,6 +475,16 @@
           damage:
             types:
               Poison: 2
+          conditions: # DEN: Detritivores aren't poisoned by vent crud
+          - !type:MetabolizerTypeCondition
+            type: [ Detritivore ]
+            inverted: true
+        - !type:SatiateHunger # DEN: Detritivores can process vent crud
+        # DEN Comment: This cannot be in Digestion or the metabolism will break.
+          factor: 0.75
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Detritivore ]
 
 - type: reagent
   id: Romerol
@@ -488,7 +519,7 @@
       - !type:PopupMessage
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox ]
+          type: [ Animal, Vox, Detritivore ] # DEN: Add Detritivore
           inverted: true
         type: Local
         visualType: MediumCaution
@@ -498,12 +529,12 @@
         probability: 0.1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
+          type: [ Animal, Vox, Plant, Detritivore ] # DEN: Add Detritivore
           inverted: true
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
+          type: [ Animal, Vox, Plant, Detritivore ] # DEN: Add Detritivore
           inverted: true
         damage:
           types:
@@ -518,13 +549,16 @@
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Animal ]
+          type: [ Animal, Detritivore ] # DEN: Add Detritivore
         reagent: Protein
         amount: 0.5
       - !type:AdjustReagent
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
+        - !type:MetabolizerTypeCondition # DEN: Prevent redundant metabolism for detritivore vox
+          type: [ Detritivore ]
+          inverted: true
         reagent: Protein
         amount: 0.25
 
@@ -762,6 +796,31 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [Vox]
+      - !type:SatiateHunger # DEN: Detritivores can process trash
+        factor: 0.75
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Detritivore ]
+        - !type:MetabolizerTypeCondition
+          inverted: true
+          type: [Vox]
+      - !type:HealthChange # DEN: Add poison effect to trash
+        damage:
+          types:
+            Poison: 2
+        conditions:
+        - !type:MetabolizerTypeCondition
+          inverted: true
+          type: [ Vox, Detritivore ]
+      - !type:Vomit # DEN: Add poison effect to trash
+        probability: 0.2
+        conditions:
+        - !type:ReagentCondition
+          reagent: ToxinTrash
+          min: 2
+        - !type:MetabolizerTypeCondition # DEN: Detritivore metabolism
+          type: [ Vox, Detritivore ]
+          inverted: true
 
 - type: reagent
   id: Hemorrhinol

@@ -1,0 +1,12 @@
+marking-BurqaSolidLizard = Burqa
+marking-BurqaSolidLizard-burqalizard = Burqa
+marking-HijabFashionableLizard = Hijab (Fashionable)
+marking-HijabFashionableLizard-hijabchic = Hijab (Fashionable)
+marking-HijabSimpleLizard = Hijab (Simple)
+marking-HijabSimpleLizard-hijabsimple = Hijab (Simple)
+marking-NiqabLizard = Niqab
+marking-NiqabLizard-niqab = Niqab
+marking-TichelFashionableLizard = Tichel (Fashionable)
+marking-TichelFashionableLizard-tichelfashionable = Tichel (Fashionable)
+marking-TichelSimpleLizard = Tichel (Simple)
+marking-TichelSimpleLizard-tichelsimple = Tichel (Simple)

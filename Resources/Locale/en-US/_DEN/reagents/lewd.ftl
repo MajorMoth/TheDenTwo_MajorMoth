@@ -1,0 +1,9 @@
+reagent-effect-aphrodisiac-mild1 = Your entire body feels warm.
+reagent-effect-aphrodisiac-mild2 = Your breathing feels heavier.
+reagent-effect-aphrodisiac-mild3 = Your thoughts feel more vivid.
+reagent-effect-aphrodisiac-mild4 = The flush in your face is hard to ignore.
+reagent-effect-aphrodisiac-mild5 = You feel more sensitive to the touch.
+reagent-effect-aphrodisiac-mild6 = Every sensation feels more intense.
+reagent-effect-aphrodisiac-mildoverdose1 = You feel nauseous.
+reagent-effect-aphrodisiac-mildoverdose2 = You feel lightheaded.
+reagent-effect-aphrodisiac-mildexpired1 = You feel your inhibitions normalize.

@@ -1,4 +1,6 @@
+using Content.Shared._DEN.Language.Components;
 using Content.Shared.Body.Events;
+using Content.Shared.Chat;
 using Content.Shared.Emoting;
 using Content.Shared.Hands;
 using Content.Shared.Interaction;
@@ -19,11 +21,11 @@ namespace Content.Shared.ActionBlocker
     /// Utility methods to check if a specific entity is allowed to perform an action.
     /// </summary>
     [UsedImplicitly]
-    public sealed class ActionBlockerSystem : EntitySystem
+    public sealed partial class ActionBlockerSystem : EntitySystem
     {
-        [Dependency] private readonly SharedContainerSystem _container = default!;
+        [Dependency] private SharedContainerSystem _container = default!;
 
-        [Dependency] private readonly EntityQuery<ComplexInteractionComponent> _complexInteractionQuery = default!;
+        [Dependency] private EntityQuery<ComplexInteractionComponent> _complexInteractionQuery = default!;
 
         // These two methods should probably both live in SharedMoverController
         // but they're called in a million places and I'm not doing that
@@ -45,7 +47,9 @@ namespace Content.Shared.ActionBlocker
                 Dirty(uid, component);
 
             component.CanMove = !ev.Cancelled;
-            return !ev.Cancelled;
+            var updatedEv = new CanMoveUpdatedEvent(component.CanMove);
+            RaiseLocalEvent(uid, ref updatedEv);
+            return component.CanMove;
         }
 
         /// <summary>
@@ -139,10 +143,10 @@ namespace Content.Shared.ActionBlocker
             return !itemEv.Cancelled;
         }
 
-        public bool CanSpeak(EntityUid uid)
+        public bool CanSpeak(EntityUid uid, Entity<LanguageComponent> language, ChatChannel? channel = null) // DEN: Languages
         {
             // This one is used as broadcast
-            var ev = new SpeakAttemptEvent(uid);
+            var ev = new SpeakAttemptEvent(uid, language, channel); // DEN: Languages
             RaiseLocalEvent(uid, ev, true);
 
             return !ev.Cancelled;

@@ -1,0 +1,23 @@
+# General
+
+- type: foodSequenceElement
+  id: Pomegranate
+  name: food-sequence-content-pomegranate
+  sprites:
+  - sprite: _DEN/Objects/Specific/Hydroponics/pomegranate.rsi
+    state: produce
+  tags:
+  - Fruit
+
+# Burgers
+
+## Produce
+
+- type: foodSequenceElement
+  id: PomegranateBurger
+  name: food-sequence-burger-content-pomegranate
+  sprites:
+  - sprite: _DEN/Objects/Specific/Hydroponics/pomegranate.rsi
+    state: produce
+  tags:
+  - Fruit

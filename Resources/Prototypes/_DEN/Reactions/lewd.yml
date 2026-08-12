@@ -1,0 +1,15 @@
+# This reaction is designed to be niche but still accessible to passengers, bartenders, et cetera.
+# It should never overlap with the recipe of a feasibly makeable drink - i.e. you should not be
+# able to make this by accident.
+# If this recipe is ever changed, keep these things in mind.
+- type: reaction
+  id: Pomelustine
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    JuicePomegranate:
+      amount: 5
+    Ash:
+      amount: 1
+  products:
+    Pomelustine: 5

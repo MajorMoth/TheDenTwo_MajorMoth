@@ -1,0 +1,14 @@
+# Aphrodisiacs
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkPomelustineGlass
+  suffix: pomelustine
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Pomelustine
+        Quantity: 30
+
+# Others.

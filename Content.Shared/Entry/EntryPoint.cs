@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
+using Content.Shared._DEN.Consent.Managers;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Maps;
 using Robust.Shared;
@@ -15,13 +16,13 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Entry
 {
-    public sealed class EntryPoint : GameShared
+    public sealed partial class EntryPoint : GameShared
     {
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
-        [Dependency] private readonly IResourceManager _resMan = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private ITileDefinitionManager _tileDefinitionManager = default!;
+        [Dependency] private IResourceManager _resMan = default!;
 #if DEBUG
-        [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+        [Dependency] private IConfigurationManager _configurationManager = default!;
 #endif
 
         private readonly ResPath _ignoreFileDirectory = new("/IgnoredPrototypes/");
@@ -47,6 +48,7 @@ namespace Content.Shared.Entry
 
             InitTileDefinitions();
             Dependencies.Resolve<MarkingManager>().Initialize();
+            Dependencies.Resolve<IConsentManager>().Initialize(); // DEN: Consent system
 
 #if DEBUG
             _configurationManager.OverrideDefault(CVars.NetFakeLagMin, 0.075f);

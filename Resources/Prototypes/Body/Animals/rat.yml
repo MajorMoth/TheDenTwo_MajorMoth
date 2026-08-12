@@ -4,7 +4,7 @@
   suffix: Rat
   components:
   - type: Metabolizer
-    metabolizerTypes: [ Rat ]
+    metabolizerTypes: [ Rat, Detritivore ] # DEN: Add Detritivore
 
 - type: entity
   id: BaseMobRat
@@ -16,7 +16,7 @@
       body_organs: !type:AllSelector
         children:
         - id: OrganRatLungs
-        - id: OrganAnimalHeart
-        - id: OrganAnimalStomach
-        - id: OrganAnimalLiver
-        - id: OrganAnimalKidneys
+        - id: OrganDetritivoreHeart # DEN: OrganAnimalHeart -> OrganDetritivoreHeart
+        - id: OrganDetritivoreStomach # DEN: OrganAnimalStomach -> OrganDetritivoreStomach
+        - id: OrganDetritivoreLiver # DEN: OrganAnimalLiver -> OrganDetritivoreLiver
+        - id: OrganDetritivoreKidneys # DEN: OrganAnimalKidneys -> OrganDetritivoreKidneys

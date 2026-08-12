@@ -1,0 +1,54 @@
+- type: entity
+  id: OrganDetritivoreMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Animal, Detritivore ]
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganDetritivore
+  abstract: true
+  suffix: Detritivore
+
+- type: entity
+  parent: OrganDetritivore
+  id: OrganDetritivoreInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi # TODO: Custom detritivore organ sprites
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganDetritivoreInternal, OrganDetritivoreMetabolizer ]
+  id: OrganDetritivoreLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganDetritivoreInternal, OrganDetritivoreMetabolizer ]
+  id: OrganDetritivoreHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganDetritivoreInternal, OrganDetritivoreMetabolizer ]
+  id: OrganDetritivoreStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganDetritivoreInternal, OrganDetritivoreMetabolizer ]
+  id: OrganDetritivoreLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganDetritivoreInternal, OrganDetritivoreMetabolizer ]
+  id: OrganDetritivoreKidneys
+
+- type: entity
+  abstract: true
+  id: BaseMobDetritivore
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganDetritivoreLungs
+        - id: OrganDetritivoreHeart
+        - id: OrganDetritivoreStomach
+        - id: OrganDetritivoreLiver
+        - id: OrganDetritivoreKidneys

@@ -1,0 +1,14 @@
+# Juice
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkPomegranateJuiceGlass
+  suffix: pomegranate juice
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 30
+
+# Cocktails

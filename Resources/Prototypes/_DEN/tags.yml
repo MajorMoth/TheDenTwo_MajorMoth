@@ -1,5 +1,74 @@
 # alphabetical order PLEASE
 # also document their purpose
 
+# Roleplay holoprojectors. Used as a storage whitelist in PDAs.
+- type: Tag
+  id: CivilianHoloprojector
+
+- type: Tag
+  id: Flash
+
+# Gel cubes. Used in gel cube box storage whitelist.
+- type: Tag
+  id: GelCube
+
+# For jelly food items
+# TODO: Add bounty.
+- type: Tag
+  id: Jelly
+
+# Mantis tags start, alphabetized
+- type: Tag
+  id: MantisBeltStorable
+
+- type: Tag
+  id: MantisBoxCandlesStorable
+
+- type: Tag
+  id: MantisBoxChemicalsStorable
+
+- type: Tag
+  id: MantisBoxFolderStorable
+
+- type: Tag
+  id: MantisBoxRestraintsStorable
+
+- type: Tag
+  id: MantisCane
+
+- type: Tag
+  id: MantisCaster
+
+- type: Tag
+  id: MantisCasterPistol
+
+- type: Tag
+  id: MantisCasterRevolver
+
+- type: Tag
+  id: MantisCasterShotgun
+
+- type: Tag
+  id: MantisCasterSubMachineGun
+
+- type: Tag
+  id: MantisFist
+
+- type: Tag
+  id: MantisGreatsword
+
+- type: Tag
+  id: MantisKnife
+
+- type: Tag
+  id: MantisSickle
+# Mantis tags end, god almighty
+
+- type: Tag
+  id: ScienceTool
+
 - type: Tag
   id: TeddyRibbon # Ribbon slot for teddy bears
+
+- type: Tag
+  id: XenoQueen # Xeno Queen tag for hivemind

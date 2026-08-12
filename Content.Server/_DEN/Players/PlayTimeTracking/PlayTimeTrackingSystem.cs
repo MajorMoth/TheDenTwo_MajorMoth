@@ -30,7 +30,7 @@ public sealed partial class PlayTimeTrackingSystem
             playTimes,
             out _,
             EntityManager,
-            _prototypes,
+            ProtoMan,
             profile);
 
         var playerReqs = _roles.GetRolePlayerRequirements(job);

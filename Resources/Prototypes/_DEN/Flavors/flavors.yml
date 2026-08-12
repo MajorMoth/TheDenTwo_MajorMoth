@@ -1,0 +1,9 @@
+- type: flavor
+  id: tart
+  flavorType: Base
+  description: flavor-base-tart
+
+- type: flavor
+  id: pomegranate
+  flavorType: Complex
+  description: flavor-complex-pomegranate

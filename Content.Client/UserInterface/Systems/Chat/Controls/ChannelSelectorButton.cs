@@ -61,6 +61,7 @@ public sealed class ChannelSelectorButton : ChatPopupButton<ChannelSelectorPopup
         {
             ChatSelectChannel.Radio => Color.LimeGreen,
             ChatSelectChannel.LOOC => Color.MediumTurquoise,
+            ChatSelectChannel.SubtleOOC => Color.LightPink, // DEN - Add subtle OOC
             ChatSelectChannel.OOC => Color.LightSkyBlue,
             ChatSelectChannel.Dead => Color.MediumPurple,
             ChatSelectChannel.Admin => Color.HotPink,

@@ -66,16 +66,20 @@
     modifiers:
       SpaceLube: 0.25
       SpaceGlue: 5
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      lube:
-        maxVol: 250
+    - SolutionLatheLube
   - type: Spillable
     solution: lube
   - type: RefillableSolution
     solution: lube
   - type: ExaminableSolution
     solution: lube
+
+- type: entity
+  parent: [SolutionLube, SolutionLarge]
+  id: SolutionLatheLube # Its own prototype since some lathes might interface with solutions in other ways
+  categories: [ HideSpawnMenu ]
 
 - type: entity
   abstract: true
@@ -138,6 +142,8 @@
     - ServiceStatic
     - PowerCellsStatic
     - ElectronicsStatic
+    - TentsStatic   #DEN
+    - DenHoloprojectorsStatic # DEN Shared static recipes.
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic
@@ -487,6 +493,7 @@
   - type: OreSiloClient
   - type: LatheAnnouncing
     channels: [Medical]
+  - type: AmbientMusicMarkerMedical
 
 - type: entity
   parent: BaseLathe
@@ -523,6 +530,7 @@
     - Scarves
     - Carpets
     - Bedsheets
+    - TentsStatic   #DEN
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
@@ -697,6 +705,7 @@
     - PlasticTilesStatic
     - CarpetTilesStatic
     - PreciousTilesStatic
+    - DenFloorPoolTilesStatic # DEN
     dynamicPacks:
     - FauxTiles
   - type: MaterialStorage

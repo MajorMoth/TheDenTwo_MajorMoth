@@ -56,7 +56,7 @@ public abstract partial class SharedRoleSystem
     [PublicAPI]
     public List<IPlayerRequirement>? GetRolePlayerRequirements(ProtoId<JobPrototype> jobId)
     {
-        return _prototypes.TryIndex(jobId, out var job)
+        return ProtoMan.TryIndex(jobId, out var job)
             ? GetRolePlayerRequirements(job)
             : null;
     }
@@ -73,7 +73,7 @@ public abstract partial class SharedRoleSystem
     [PublicAPI]
     public List<IPlayerRequirement>? GetRolePlayerRequirements(ProtoId<AntagPrototype> antagId)
     {
-        return _prototypes.TryIndex(antagId, out var antag)
+        return ProtoMan.TryIndex(antagId, out var antag)
             ? GetRolePlayerRequirements(antag)
             : null;
     }

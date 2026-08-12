@@ -123,6 +123,7 @@
       cell_slot: !type:ContainerSlot { }
       borg_module: !type:Container { }
       part-container: !type:Container
+      languages: !type:Container { } # DEN: Languages
   - type: PowerCellSlot
     cellSlotId: cell_slot
     fitsInCharger: true
@@ -145,8 +146,7 @@
     speechVerb: Robotic
     speechSounds: Borg
   - type: Vocal
-    sounds:
-      Unsexed: UnisexSilicon
+    emoteSounds: UnisexSilicon
     wilhelmProbability: 0
   - type: DamagedSiliconAccent
   - type: UnblockableSpeech
@@ -167,8 +167,10 @@
     - enum.BorgUiKey.Key
   - type: LockedWiresPanel
   - type: Damageable
+  - type: Injurable
     damageContainer: Silicon
   - type: Destructible
+    generateOverkillThreshold: false
     thresholds:
     - trigger:
         !type:DamageTrigger
@@ -186,13 +188,15 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:EmptyContainersBehaviour
-        containers:
-        - borg_brain
-        - borg_module
-        - cell_slot
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+      - !type:GibBehavior
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ScrapGlass:
+            min: 1
+            max: 1
+          SheetSteel:
+            min: 10
+            max: 20
   - type: HandheldLight
     toggleOnInteract: false
     wattage: 0.2
@@ -252,6 +256,10 @@
     requiredMobState:
     - Critical
     - Dead
+  # DEN: Languages
+  - type: LanguageCommunicator
+    languages:
+      Basic: [ true, Fluent ]
 
 - type: entity
   abstract: true
@@ -367,8 +375,7 @@
     allowedEmotes:
     - Laugh
   - type: Vocal
-    sounds:
-      Unsexed: UnisexSiliconSyndicate
+    emoteSounds: UnisexSiliconSyndicate
   - type: PointLight
     color: "#dd200b"
   - type: BypassLock
@@ -428,8 +435,7 @@
     allowedEmotes:
     - Laugh
   - type: Vocal
-    sounds:
-      Unsexed: UnisexSiliconSyndicate
+    emoteSounds: UnisexSiliconSyndicate
   - type: PointLight
     color: "#dd200b"
   - type: BypassLock
@@ -483,8 +489,7 @@
     allowedEmotes:
     - Laugh
   - type: Vocal
-    sounds:
-      Unsexed: UnisexSiliconXenoborg
+    emoteSounds: UnisexSiliconXenoborg
     wilhelmProbability: 0
   - type: DamagedSiliconAccent
   - type: UnblockableSpeech

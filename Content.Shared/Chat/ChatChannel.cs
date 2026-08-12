@@ -4,7 +4,7 @@ namespace Content.Shared.Chat
     ///     Represents chat channels that the player can filter chat tabs by.
     /// </summary>
     [Flags]
-    public enum ChatChannel : ushort
+    public enum ChatChannel // DEN - Change to integer from ushort
     {
         None = 0,
 
@@ -86,9 +86,19 @@ namespace Content.Shared.Chat
         Unspecified = 1 << 14,
 
         /// <summary>
+        ///     A quieter and more private emote channel.
+        /// </summary>
+        Subtle = 1 << 15,
+
+        /// <summary>
+        ///     A quieter and more private emote channel.
+        /// </summary>
+        SubtleOOC = 1 << 16,
+
+        /// <summary>
         ///     Channels considered to be IC.
         /// </summary>
-        IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Notifications,
+        IC = Local | Whisper | Radio | Dead | Emotes | Subtle | Damage | Visual | Notifications, // DEN - Add subtle
 
         AdminRelated = Admin | AdminAlert | AdminChat,
     }

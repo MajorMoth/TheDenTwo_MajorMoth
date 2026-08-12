@@ -22,6 +22,7 @@ namespace Content.Server.Database
         public DbSet<Profile> Profile { get; set; } = null!;
         public DbSet<AssignedUserId> AssignedUserId { get; set; } = null!;
         public DbSet<Player> Player { get; set; } = default!;
+        public DbSet<ConsentData> ConsentData { get; set; } = null!;
         public DbSet<Admin> Admin { get; set; } = null!;
         public DbSet<AdminRank> AdminRank { get; set; } = null!;
         public DbSet<Round> Round { get; set; } = null!;
@@ -48,7 +49,10 @@ namespace Content.Server.Database
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
+        public DbSet<DenuModel.DenuSettings> DenuSettings { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
+        public DbSet<CustomVoteLog> CustomVoteLog { get; set; } = null!;
+        public DbSet<CustomVoteLogOption> CustomVoteLogOption { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -59,6 +63,13 @@ namespace Content.Server.Database
             modelBuilder.Entity<Profile>()
                 .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
                 .IsUnique();
+
+            modelBuilder.Entity<DenuModel.DenuSettings>()
+                .HasOne(d => d.Player)
+                .WithOne()
+                .HasForeignKey<DenuModel.DenuSettings>(d => d.PlayerUserId)
+                .HasPrincipalKey<Player>(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
@@ -174,6 +185,12 @@ namespace Content.Server.Database
                 .HasOne(p => p.Server)
                 .WithMany(p => p.ConnectionLogs)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            // DEN Start: Consent system
+            modelBuilder.Entity<ConsentData>()
+                .HasIndex(c => new { c.Id, c.UserId } )
+                .IsUnique();
+            // DEN End
 
             // SetNull is necessary for created by/edited by-s here,
             // so you can safely delete admins (GDPR right to erasure) while keeping the notes intact
@@ -296,6 +313,7 @@ namespace Content.Server.Database
                 .HasDefaultValue(HwidType.Legacy);
 
             ModelBan.OnModelCreating(modelBuilder);
+            ModelCustomVoteLog.OnModelCreating(modelBuilder);
         }
 
         public virtual IQueryable<AdminLog> SearchLogs(IQueryable<AdminLog> query, string searchText)
@@ -329,6 +347,7 @@ namespace Content.Server.Database
         public string FlavorText { get; set; } = null!;
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
+        public string? Voice { get; set; } = null!; // If null, the voice gets defaulted to the sex associated value
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
         [Column(TypeName = "jsonb")] public JsonDocument? OrganMarkings { get; set; } = null!;
@@ -521,6 +540,17 @@ namespace Content.Server.Database
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
     }
 
+    // DEN Start: Consent database
+    [Table("global_consent_info")]
+    public class ConsentData
+    {
+        [Key] public int Id { get; set; }
+        [Required] public Guid UserId { get; set; }
+        [Required] public string ConsentId { get; set; } = null!;
+        [Required] public bool ConsentValue { get; set; }
+    }
+    // DEN End
+
     [Table("whitelist")]
     public class Whitelist
     {
@@ -594,6 +624,8 @@ namespace Content.Server.Database
         public List<Player> Players { get; set; } = default!;
 
         public List<AdminLog> AdminLogs { get; set; } = default!;
+
+        public List<CustomVoteLog> CustomVoteLogs { get; set; } = default!;
 
         [ForeignKey("Server")] public int ServerId { get; set; }
         public Server Server { get; set; } = default!;

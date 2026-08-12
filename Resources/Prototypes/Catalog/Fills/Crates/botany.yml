@@ -71,7 +71,7 @@
   parent: CrateHydroponics
   id: CrateHydroponicsSeeds
   name: seeds crate
-  description: Big things have small beginnings. Contains twenty-four different seeds.
+  description: Big things have small beginnings. Contains twenty-five different seeds. # DEN: 24 -> 25
   components:
   - type: EntityTableContainerFill
     containers:
@@ -101,6 +101,7 @@
         - id: PeaSeeds
         - id: CherrySeeds
         - id: CottonSeeds
+        - id: PomegranateSeeds # DEN
 
 - type: entity
   parent: CrateHydroponics

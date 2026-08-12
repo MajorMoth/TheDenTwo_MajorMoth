@@ -1,0 +1,32 @@
+- type: entity
+  parent: MobStatusEffectBase
+  id: StatusEffectMildAphrodisiac
+  name: mild aphrodisiac effect
+  components:
+  - type: IntervalPopupMessageStatusEffect
+    interval: [10, 90]
+    visualType: Medium
+    recipients: Local
+    messages:
+    - reagent-effect-aphrodisiac-mild1
+    - reagent-effect-aphrodisiac-mild2
+    - reagent-effect-aphrodisiac-mild3
+    - reagent-effect-aphrodisiac-mild4
+    - reagent-effect-aphrodisiac-mild5
+    - reagent-effect-aphrodisiac-mild6
+  - type: ExpiryPopupMessageStatusEffect
+    messages:
+    - reagent-effect-aphrodisiac-mildexpired1
+
+- type: entity
+  parent: MobStatusEffectBase
+  id: StatusEffectMildAphrodisiacOverdose
+  name: mild aphrodisiac overdose
+  components:
+  - type: IntervalPopupMessageStatusEffect
+    interval: [5, 30]
+    visualType: MediumCaution
+    recipients: Local
+    messages:
+    - reagent-effect-aphrodisiac-mildoverdose1
+    - reagent-effect-aphrodisiac-mildoverdose2

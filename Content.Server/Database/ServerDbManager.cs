@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Shared._DEN.Consent.Prototypes;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
@@ -131,6 +132,28 @@ namespace Content.Server.Database
         /// </summary>
         /// <returns><see cref="ServerBanExemptFlags.None"/> if the user is not exempt from any bans.</returns>
         Task<ServerBanExemptFlags> GetBanExemption(NetUserId userId, CancellationToken cancel = default);
+
+        #endregion
+
+        #region Consent
+
+        /// <summary>
+        /// Get all consent information on a player.
+        /// </summary>
+        /// <param name="player">The player to get the consent information from.</param>
+        /// <param name="cancel"></param>
+        /// <returns>All consent information belonging to the player.</returns>
+        Task<List<ConsentData>> GetConsentData(Guid player, CancellationToken cancel = default);
+
+        /// <summary>
+        /// Set the value of a consent toggle.
+        /// </summary>
+        /// <param name="player">The player to set the consent information of.</param>
+        /// <param name="protoId">The consent toggle ID to set.</param>
+        /// <param name="value">The new value.</param>
+        Task SetConsentData(Guid player,
+            ProtoId<ConsentTogglePrototype> protoId,
+            bool value);
 
         #endregion
 
@@ -301,6 +324,14 @@ namespace Content.Server.Database
 
         #endregion
 
+        #region Denu Settings
+
+        Task<string> LoadDenuSettingsJsonAsync(Guid userId);
+        Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson);
+        Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId);
+
+        #endregion
+
         #region IPintel
 
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
@@ -327,6 +358,46 @@ namespace Content.Server.Database
         /// </remarks>
         /// <param name="notification">The notification to send.</param>
         Task SendNotification(DatabaseNotification notification);
+
+        #endregion
+
+        #region Custom vote log
+
+        /// <summary>
+        /// Log a new custom vote to the database.
+        /// </summary>
+        /// <param name="title">The player-facing title for the custom vote.</param>
+        /// <param name="roundId">The round ID this vote was initiated.</param>
+        /// <param name="initiator">The user ID of the admin that initiated the vote.</param>
+        /// <param name="options">The player-facing contents of each vote option.</param>
+        /// <remarks>
+        /// The created vote is initially in the <see cref="CustomVoteState.Active"/> state.
+        /// </remarks>
+        /// <returns>
+        /// The ID of the database entry,
+        /// for subsequent calls to <see cref="CustomVoteLogFinish"/> or <see cref="CustomVoteLogCancel"/>.
+        /// </returns>
+        Task<int> CustomVoteLogAdd(string title, int roundId, NetUserId? initiator, ImmutableArray<string> options);
+
+        /// <summary>
+        /// Mark a logged custom vote as finished.
+        /// </summary>
+        /// <param name="voteId">
+        /// The database ID of the custom vote, as returned by <see cref="CustomVoteLogAdd"/>.
+        /// </param>
+        /// <param name="voteCounts">
+        /// The counts each option received. The indexes are matched to the options given in
+        /// <see cref="CustomVoteLogAdd"/>.
+        /// </param>
+        Task CustomVoteLogFinish(int voteId, ImmutableArray<int> voteCounts);
+
+        /// <summary>
+        /// Mark a logged custom vote as canceled.
+        /// </summary>
+        /// <param name="voteId">
+        /// The database ID of the custom vote, as returned by <see cref="CustomVoteLogAdd"/>.
+        /// </param>
+        Task CustomVoteLogCancel(int voteId);
 
         #endregion
     }
@@ -356,7 +427,7 @@ namespace Content.Server.Database
         public string? Payload { get; set; }
     }
 
-    public sealed class ServerDbManager : IServerDbManager
+    public sealed partial class ServerDbManager : IServerDbManager
     {
         public static readonly Counter DbReadOpsMetric = Metrics.CreateCounter(
             "db_read_ops",
@@ -370,10 +441,10 @@ namespace Content.Server.Database
             "db_executing_ops",
             "Amount of active database operations. Note that some operations may be waiting for a database connection.");
 
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IResourceManager _res = default!;
-        [Dependency] private readonly ILogManager _logMgr = default!;
-        [Dependency] private readonly ISerializationManager _serialization = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IResourceManager _res = default!;
+        [Dependency] private ILogManager _logMgr = default!;
+        [Dependency] private ISerializationManager _serialization = default!;
 
         private ServerDbBase _db = default!;
         private LoggingProvider _msLogProvider = default!;
@@ -542,10 +613,26 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.UpdateBanExemption(userId, flags));
         }
 
+        // DEN Start: Consent system
         public Task<ServerBanExemptFlags> GetBanExemption(NetUserId userId, CancellationToken cancel = default)
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetBanExemption(userId, cancel));
+        }
+
+        public Task<List<ConsentData>> GetConsentData(Guid player, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetConsentData(player, cancel));
+        }
+        // DEN End
+
+        public Task SetConsentData(Guid player,
+            ProtoId<ConsentTogglePrototype> protoId,
+            bool value)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetConsentData(player, protoId, value));
         }
 
         #region Playtime
@@ -961,6 +1048,26 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
         }
 
+        // DEN Start: Denu
+        public Task<string> LoadDenuSettingsJsonAsync(Guid userId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.LoadDenuSettingsJsonAsync(userId));
+        }
+
+        public Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SaveDenuSettingsJsonAsync(userId, settingsJson));
+        }
+
+        public Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetProfileSlotToProfileIdMapAsync(userId));
+        }
+        // DEN End
+
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)
         {
             DbWriteOpsMetric.Inc();
@@ -995,6 +1102,28 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SendNotification(notification));
+        }
+
+        public Task<int> CustomVoteLogAdd(
+            string title,
+            int roundId,
+            NetUserId? initiator,
+            ImmutableArray<string> options)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.CustomVoteLogAdd(title, roundId, initiator, options));
+        }
+
+        public Task CustomVoteLogFinish(int voteId, ImmutableArray<int> voteCounts)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.CustomVoteLogFinish(voteId, voteCounts));
+        }
+
+        public Task CustomVoteLogCancel(int voteId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.CustomVoteLogCancel(voteId));
         }
 
         private async void HandleDatabaseNotification(DatabaseNotification notification)

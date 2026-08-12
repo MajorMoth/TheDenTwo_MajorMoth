@@ -19,15 +19,15 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared.Clumsy;
 
-public sealed class ClumsySystem : EntitySystem
+public sealed partial class ClumsySystem : EntitySystem
 {
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private INetManager _net = default!;
 
     public override void Initialize()
     {
@@ -131,6 +131,10 @@ public sealed class ClumsySystem : EntitySystem
     {
         // checks if ClumsyVaulting is false, if so, skips.
         if (!ent.Comp.ClumsyVaulting)
+            return;
+
+        // DEN: Allow climbables to bypass clumsy.
+        if (args.BeingClimbedOn.Comp.BypassClumsy)
             return;
 
         if (!_cfg.GetCVar(CCVars.GameTableBonk)

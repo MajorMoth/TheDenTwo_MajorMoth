@@ -1,4 +1,6 @@
 using Content.Server.Chat.Systems;
+using Content.Shared._DEN.Language.Components;
+using Content.Shared.Chat;
 using Content.Shared.Speech;
 using Content.Shared.Speech.Components;
 using Content.Shared.SurveillanceCamera.Components;
@@ -6,12 +8,14 @@ using Content.Shared.Whitelist;
 using Robust.Shared.Player;
 using static Content.Server.Chat.Systems.ChatSystem;
 
-namespace Content.Server.SurveillanceCamera;
+namespace Content.Server.SurveillanceCamera.Systems;
 
-public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
+public sealed partial class SurveillanceCameraMicrophoneSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _xforms = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private SharedTransformSystem _xforms = default!;
+    [Dependency] private EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private EntityQuery<AudibleComponent> _audibleQuery = default!; // DEN: language
+    [Dependency] private EntityQuery<LineOfSightLanguageComponent> _losQuery = default!; // DEN: language
     public override void Initialize()
     {
         base.Initialize();
@@ -23,9 +27,8 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
 
     private void OnExpandRecipients(ExpandICChatRecipientsEvent ev)
     {
-        var xformQuery = GetEntityQuery<TransformComponent>();
         var sourceXform = Transform(ev.Source);
-        var sourcePos = _xforms.GetWorldPosition(sourceXform, xformQuery);
+        var sourcePos = _xforms.GetWorldPosition(sourceXform);
 
         // This function ensures that chat popups appear on camera views that have connected microphones.
         foreach (var (_, __, camera, xform) in EntityQuery<SurveillanceCameraMicrophoneComponent, ActiveListenerComponent, SurveillanceCameraComponent, TransformComponent>())
@@ -36,7 +39,7 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
             // get range to camera. This way wispers will still appear as obfuscated if they are too far from the camera's microphone
             var range = (xform.MapID != sourceXform.MapID)
                 ? -1
-                : (sourcePos - _xforms.GetWorldPosition(xform, xformQuery)).Length();
+                : (sourcePos - _xforms.GetWorldPosition(xform)).Length();
 
             if (range < 0 || range > ev.VoiceRange)
                 continue;
@@ -62,16 +65,18 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
     public void CanListen(EntityUid uid, SurveillanceCameraMicrophoneComponent microphone, ListenAttemptEvent args)
     {
         // TODO maybe just make this a part of ActiveListenerComponent?
-        if (_whitelistSystem.IsWhitelistPass(microphone.Blacklist, args.Source))
+        if (_whitelistSystem.IsWhitelistPass(microphone.Blacklist, args.Source)
+            || !_audibleQuery.HasComponent(args.LanguageEnt)
+            || !_losQuery.HasComponent(args.LanguageEnt)) // DEN: Only audible or visual languages can be transferred over a camera.
             args.Cancel();
     }
-
+    
     public void RelayEntityMessage(EntityUid uid, SurveillanceCameraMicrophoneComponent component, ListenEvent args)
     {
         if (!TryComp(uid, out SurveillanceCameraComponent? camera))
             return;
 
-        var ev = new SurveillanceCameraSpeechSendEvent(args.Source, args.Message);
+        var ev = new SurveillanceCameraSpeechSendEvent(args.Source, args.LanguageEnt, args.Message, args.Verb); // DEN: Languages
 
         foreach (var monitor in camera.ActiveMonitors)
         {
@@ -99,12 +104,19 @@ public sealed class SurveillanceCameraMicrophoneSystem : EntitySystem
 public sealed class SurveillanceCameraSpeechSendEvent : EntityEventArgs
 {
     public EntityUid Speaker { get; }
-    public string Message { get; }
+    public ComplexChatMessage Message { get; } // DEN: Complex Chat Messages
+    public Entity<LanguageComponent> LanguageEnt { get; } // DEN: language
+    public string Verb { get; } // DEN: Language
 
-    public SurveillanceCameraSpeechSendEvent(EntityUid speaker, string message)
+    public SurveillanceCameraSpeechSendEvent(EntityUid speaker, 
+        Entity<LanguageComponent> languageEnt,
+        ComplexChatMessage message,
+        string verb) // DEN: Convert to Complex Chat and languages.
     {
         Speaker = speaker;
         Message = message;
+        LanguageEnt = languageEnt; // DEN: Languages
+        Verb = verb; // DEN: Languages
     }
 }
 

@@ -1,0 +1,823 @@
+- type: marking
+  id: HumanTattooSkeletarmL
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_arm_l
+
+- type: marking
+  id: HumanTattooSkeletarmR
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_arm_r
+
+- type: marking
+  id: HumanTattooSkeletarmLU
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_arm_l
+  shaders:
+    tattoo_skelet_arm_l: unshaded
+
+- type: marking
+  id: HumanTattooSkeletarmRU
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_arm_r
+  shaders:
+    tattoo_skelet_arm_r: unshaded
+
+- type: marking
+  id: HumanTattooSkeletbody
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_body
+
+- type: marking
+  id: HumanTattooSkeletbodyU
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_body
+  shaders:
+    tattoo_skelet_body: unshaded
+
+- type: marking
+  id: HumanTattooSkeletfootL
+  bodyPart: LFoot
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_foot_l
+
+- type: marking
+  id: HumanTattooSkeletfootR
+  bodyPart: RFoot
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_foot_r
+
+- type: marking
+  id: HumanTattooSkeletfootLU
+  bodyPart: LFoot
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_foot_l
+  shaders:
+    tattoo_skelet_foot_l: unshaded
+
+- type: marking
+  id: HumanTattooSkeletfootRU
+  bodyPart: RFoot
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_foot_r
+  shaders:
+    tattoo_skelet_foot_r: unshaded
+
+- type: marking
+  id: HumanTattooSkeletlegL
+  bodyPart: LLeg
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_leg_l
+
+- type: marking
+  id: HumanTattooSkeletlegR
+  bodyPart: RLeg
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_leg_r
+
+- type: marking
+  id: HumanTattooSkeletlegLU
+  bodyPart: LLeg
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_leg_l
+  shaders:
+    tattoo_skelet_leg_l: unshaded
+
+- type: marking
+  id: HumanTattooSkeletlegRU
+  bodyPart: RLeg
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skelet_leg_r
+  shaders:
+    tattoo_skelet_leg_r: unshaded
+
+- type: marking
+  id: HumanTattooSkull
+  bodyPart: Head
+  groupWhitelist: [Human, Slime, Arachnid]
+# speciesRestriction: [Human, Oni, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skull
+
+- type: marking
+  id: HumanTattooSkullU
+  bodyPart: Head
+  groupWhitelist: [Human, Slime, Arachnid]
+# speciesRestriction: [Human, Oni, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skull
+  shaders:
+    tattoo_skull: unshaded
+
+- type: marking
+  id: HumanTattooSkullFace
+  bodyPart: Head
+  groupWhitelist: [Human, Slime, Arachnid]
+# speciesRestriction: [Human, Oni, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skull_face
+
+- type: marking
+  id: HumanTattooSkullFaceU
+  bodyPart: Head
+  groupWhitelist: [Human, Slime, Arachnid]
+# speciesRestriction: [Human, Oni, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_skull_face
+  shaders:
+    tattoo_skull_face: unshaded
+
+- type: marking
+  id: HumanTattooSymbolElysium
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_symbol_elysium
+
+- type: marking
+  id: HumanTattooSymbolElysiumU
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_symbol_elysium
+  shaders:
+    tattoo_symbol_elysium: unshaded
+
+- type: marking
+  id: HumanTattooArmlazaL
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattooarm-laza_l
+
+- type: marking
+  id: HumanTattooArmlazaR
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattooarm-laza_r
+
+- type: marking
+  id: HumanTattooArmlazaLU
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattooarm-laza_l
+  shaders:
+    tattooarm-laza_l: unshaded
+
+- type: marking
+  id: HumanTattooArmlazaRU
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattooarm-laza_r
+  shaders:
+    tattooarm-laza_r: unshaded
+
+- type: marking
+  id: HumanTattooNarsi
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_narsi
+
+- type: marking
+  id: HumanTattooNarsiU
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_narsi
+  shaders:
+    tattoo_narsi: unshaded
+
+- type: marking
+  id: HumanTattooArmImheartmomL
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_arm_imheartmom_l
+
+- type: marking
+  id: HumanTattooArmImheartmomR
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_arm_imheartmom_r
+
+- type: marking
+  id: HumanTattooChurchdomes
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_churchdomes
+
+- type: marking
+  id: HumanTattooChurchdomesFemale
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_churchdomes_female
+
+- type: marking
+  id: HumanTattooChurchdomesU
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_churchdomes
+  shaders:
+    tattoo_churchdomes: unshaded
+
+- type: marking
+  id: HumanTattooChurchdomesFemaleU
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_churchdomes_female
+  shaders:
+    tattoo_churchdomes_female: unshaded
+
+- type: marking
+  id: HumanTattooElysiumPatriotism
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_elysium_patriotism
+
+- type: marking
+  id: HumanTattooElysiumPatriotismU
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_elysium_patriotism
+  shaders:
+    tattoo_elysium_patriotism: unshaded
+
+- type: marking
+  id: HumanTattooFullskelet
+  bodyPart: LLeg # sucks that this is here but it's a layering issue i guess
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_fullskelet
+
+- type: marking
+  id: HumanTattooFullskeletU
+  bodyPart: LLeg
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_fullskelet
+  shaders:
+    tattoo_fullskelet: unshaded
+
+- type: marking
+  id: HumanTattooKarabel
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_karabel
+
+- type: marking
+  id: HumanTattooKarabelFemale
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_karabel_female
+
+- type: marking
+  id: HumanTattooKarabelU
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_karabel
+  shaders:
+    tattoo_karabel: unshaded
+
+- type: marking
+  id: HumanTattooKarabelFemaleU
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_karabel_female
+  shaders:
+    tattoo_karabel_female: unshaded
+
+- type: marking
+  id: HumanTattooKrenelMercenary
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_KrenelMercenary
+
+- type: marking
+  id: HumanTattooKrenelMercenaryU
+  bodyPart: Chest
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+# speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_KrenelMercenary
+  shaders:
+    tattoo_KrenelMercenary: unshaded
+
+- type: marking
+  id: HumanTattooLineArmL
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_line_arm_l
+
+- type: marking
+  id: HumanTattooLineArmR
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_line_arm_r
+
+- type: marking
+  id: HumanTattooLineArmLU
+  bodyPart: LArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_line_arm_l
+  shaders:
+    tattoo_line_arm_l: unshaded
+
+- type: marking
+  id: HumanTattooLineArmRU
+  bodyPart: RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Vulpkanin]
+# inverted!! speciesRestriction: [Vox, Resomi, Harpy, Plasmaman, Thaven, IPC, Diona, Moth, Chitinid]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_line_arm_r
+  shaders:
+    tattoo_line_arm_r: unshaded
+
+- type: marking
+  id: HumanTattooRose
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_Rose
+
+- type: marking
+  id: HumanTattooRoseFemale
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_Rose_female
+
+- type: marking
+  id: HumanTattooRoseU
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_Rose
+  shaders:
+    tattoo_Rose: unshaded
+
+- type: marking
+  id: HumanTattooRoseFemaleU
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_Rose_female
+  shaders:
+    tattoo_Rose_female: unshaded
+
+- type: marking
+  id: HumanTattooSerpentTemptation
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_serpenttemptation
+
+- type: marking
+  id: HumanTattooSerpentTemptationFemale
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_serpenttemptation_female
+
+- type: marking
+  id: HumanTattooSerpentTemptationU
+  bodyPart: Chest
+  sexRestriction: [Male]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_serpenttemptation
+  shaders:
+    tattoo_serpenttemptation: unshaded
+
+- type: marking
+  id: HumanTattooSerpentTemptationFemaleU
+  bodyPart: Chest
+  sexRestriction: [Female]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Moth, Vulpkanin]
+#  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, Kitsune]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _ADT/Mobs/Customization/custom.rsi
+    state: tattoo_serpenttemptation_female
+  shaders:
+    tattoo_serpenttemptation_female: unshaded

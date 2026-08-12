@@ -1,0 +1,16 @@
+<Document>
+
+# Lewd
+
+These reagents all have NSFW-oriented theming or mechanics.
+
+As per The Den's server rules on consent, [color=orange]do not expose other players to these reagents' effects without their OOC consent.[/color] Do not trick other players into consuming these reagents or coerce other players into NSFW situations. [color=red]This will be treated as a consent breach, and you will be permanently banned.[/color]
+
+## Aphrodisiacs
+<GuideReagentGroupEmbed Group="Aphrodisiacs"/>
+
+<!-- ## Other -->
+<!-- uncomment when we get other lewd reagents -->
+<GuideReagentGroupEmbed Group="Lewd"/>
+
+</Document>
