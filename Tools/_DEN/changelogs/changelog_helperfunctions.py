@@ -51,9 +51,9 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 if DEBUG:
     DEBUG_CHANGELOG_FILE_OLD = Path("Resources/Changelog/Old.yml")
-    GITHUB_REPOSITORY = ""
+    GITHUB_REPOSITORY = "https://github.com/TheDenSS14/TheDenTwo"
     GITHUB_RUN = "1"
-    with open(r"Tools\changelogs\credentials.txt", "r") as file:
+    with open(r"Tools\_DEN\changelogs\credentials.txt", "r") as file:
         credentials = file.read().splitlines()
         GITHUB_TOKEN = credentials[1] # replace with your personal access token or the user token from your repository's secrets for debugging DO NOT COMMIT THE FILE WITH THE TOKEN
         DISCORD_WEBHOOK_URL_TEXT = credentials[2] # similar deal with this
@@ -272,7 +272,7 @@ def create_changelog_showcase(
         else:
             log.info(f"Could not find any images in pull request at: {url}")
 
-        for message, type, labels in ((change["message"], change["type"], change["labels"]) for change in changes):
+        for message, type, labels in ((change["message"], change["type"], change.get("labels", [])) for change in changes):
             emoji = TYPES_TO_EMOJI.get(type, "❓")
 
             if EXPERIMENTAL_LABEL in labels:
@@ -338,7 +338,7 @@ def create_text_changelog(
                 emoji = TYPES_TO_EMOJI.get(change["type"], "❓")
                 message = change["message"]
 
-                if EXPERIMENTAL_LABEL in entry["labels"]:
+                if EXPERIMENTAL_LABEL in entry.get("labels", []):
                     emoji = f"{emoji}{EXPERIMENTAL_EMOJI}"
 
                 # if a single line is longer than the limit, it needs to be truncated
