@@ -35,6 +35,9 @@ CHANGELOG_FILE = "Resources/Changelog/Den.yml"
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 
+EXPERIMENTAL_LABEL = "Intent: Experimental"
+EXPERIMENTAL_EMOJI = "🧪"
+
 # https://discord.com/developers/docs/resources/webhook
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_EMBED_LIMIT = 10
@@ -269,8 +272,12 @@ def create_changelog_showcase(
         else:
             log.info(f"Could not find any images in pull request at: {url}")
 
-        for message, type in ((change["message"], change["type"]) for change in changes):
+        for message, type, labels in ((change["message"], change["type"], change["labels"]) for change in changes):
             emoji = TYPES_TO_EMOJI.get(type, "❓")
+
+            if EXPERIMENTAL_LABEL in labels:
+                emoji = f"{emoji}{EXPERIMENTAL_EMOJI}"
+
             embed["fields"].append({"name":f"", "value":f"{emoji} - {message}"})
 
         embeds["embeds"].append(embed)
@@ -330,6 +337,9 @@ def create_text_changelog(
             for change in entry["changes"]:
                 emoji = TYPES_TO_EMOJI.get(change["type"], "❓")
                 message = change["message"]
+
+                if EXPERIMENTAL_LABEL in entry["labels"]:
+                    emoji = f"{emoji}{EXPERIMENTAL_EMOJI}"
 
                 # if a single line is longer than the limit, it needs to be truncated
                 if len(message) > DISCORD_SPLIT_LIMIT:
